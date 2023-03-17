@@ -460,6 +460,10 @@ a[data-button~="colors2"]:hover:before {
   margin-top: 16px;
 }
 
+.accordion__icon .accordion__icon-close {
+  width: 11px;
+}
+
 /* TABS */
 .tabs {
   position: relative;
