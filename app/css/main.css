@@ -1874,6 +1874,15 @@ a[data-button~="colors2"]:hover:before {
   border-color: #1BB888;
 }
 
+.clicks__item:hover .clicks__item-link {
+  background: #27C58B;
+  border-color: #27C58B;
+}
+
+.clicks__item:hover .clicks__item-link svg {
+  fill: #fff;
+}
+
 @media (max-width: 991px) {
   .clicks__item {
     width: 48%;
@@ -1898,15 +1907,6 @@ a[data-button~="colors2"]:hover:before {
   right: 25px;
   top: 25px;
   transition: 0.2s ease;
-}
-
-.clicks__item-link:hover {
-  background: #27C58B;
-  border-color: #27C58B;
-}
-
-.clicks__item-link:hover svg {
-  fill: #fff;
 }
 
 .clicks__item-name {
