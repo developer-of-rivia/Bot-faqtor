@@ -1,0 +1,42 @@
+/* INPUT */
+[data-input]
+    border: none
+    &:focus
+        background: #F7F9FD
+        border: 1px solid #0066FF
+// input--colors
+[data-input~="colors1"]
+    background: #F7F9FD
+    color: $black
+    ::-webkit-input-placeholder
+        color: rgba(60, 70, 85, 0.5)
+    ::-moz-placeholder
+        color: rgba(60, 70, 85, 0.5)
+    :-moz-placeholder
+        color: rgba(60, 70, 85, 0.5)
+    :-ms-input-placeholder
+        color: rgba(60, 70, 85, 0.5)
+// input--bradius
+[data-input~="bradius1"]    
+    border-radius: 10px
+// input--fontsize1
+[data-input~="fontsize1"]
+    font-size: 14px
+
+
+/* SELECT */
+[data-select]
+    border: none
+    background: url(../img/svg-ui-icons/triangle-down.svg) no-repeat calc(100% - 15px) center, #F7F9FD
+    position: relative
+    padding-right: 15px
+    -ms-appearance: none
+    appearance: none!important
+    -moz-appearance: none
+    -webkit-appearance: none
+    &:checked
+        background: #F7F9FD
+        border: 1px solid #0066FF
+// select--bradius
+[data-select~="bradius1"]    
+    border-radius: 10px

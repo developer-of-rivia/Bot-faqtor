@@ -1,0 +1,203 @@
+/* header */
+.header
+    padding: 18px 0
+    border-bottom: 1px solid rgba(0,0,0,0.2)
+    background: #fff
+    z-index: 10
+    position: sticky
+    top: 0
+    left: 0
+.header__container
+    padding: 0 30px
+    display: flex
+    align-items: center
+    gap: 45px
+    max-width: 1440px
+    margin: 0 auto
+    +lg
+        padding: 0 20px
+        gap: 25px
+    +md
+        justify-content: space-between
+    +xxs
+        padding: 0 10px
+.header__panel
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-grow: 1
+    +md
+        overflow-y: scroll
+        padding-bottom: 100px
+.header__info
+    display: flex
+    flex-direction: column
+    align-items: center
+    +lg
+        display: none
+    +md
+        display: flex
+        position: absolute
+        align-items: flex-end
+        position: fixed
+        right: 90px
+        top: 20px
+    +xxs
+        right: 70px
+.header__info-mail
+    color: $black
+    font-weight: 300
+    font-size: 12px
+    line-height: 14px
+    margin-bottom: 5px
+    &:hover
+        color: #27C58B
+.header__info-phone
+    font-size: 16px
+    color: $black
+    line-height: 19px
+    &:hover
+        color: #27C58B
+    +md
+        background: linear-gradient(to right, #27C58B, #029E81)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+.header__right
+    display: flex
+    gap: 20px
+    align-items: center
+    +md
+        flex-direction: column
+        width: 100%
+        gap: 0
+.header__menu
+    +md
+        order: 2
+        width: 100%
+.header__right-cell
+    +md
+        width: 100%
+        padding: 22px 20px
+        border-bottom: 1px solid rgba(0,0,0,0.1)
+.header__right-cell:first-child
+    +md
+        order: 2
+/* header__panel */
+.header__toggle
+    display: none
+    +md
+        display: block
+    svg
+        +md
+            width: 40px
+            height: 31px
+.header__panel
+    +md
+        transition: 0.2s ease
+        position: fixed
+        left: 0
+        top: -100vh
+        width: 100vw
+        height: calc(100vh - 81px)
+        background: #fff
+        overflow-y: auto
+        flex-direction: column
+        flex-grow: auto
+        justify-content: flex-start
+        z-index: 5
+.header__panel--open
+    +md
+        top: 81px
+.header__connect
+    +md
+        background: none
+        box-shadow: none
+        border-radius: 0px
+        padding: 0
+        background: linear-gradient(to right, #27C58B, #029E81)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        font-size: 16px
+        &:hover
+            box-shadow: none
+a.header__account
+    &:before
+        +md
+            display: none
+/* nav */
+.nav
+    display: flex
+    align-items: center
+    gap: 20px
+    +md
+        flex-direction: column
+        width: 100%
+        gap: 0
+.nav__link
+    color: $black
+    display: inline-flex
+    gap: 7px
+    align-items: center
+    svg
+        width: 11px
+        height: 7px
+.nav__item
+    +md
+        width: 100%
+        border-bottom: 1px solid rgba(0,0,0,0.1)
+.nav__link
+    +md
+        padding: 22px 20px
+        width: 100%
+.nav__link-text--desktop
+    +xl
+        display: none
+.nav__link-text--tablet
+    display: none
+    +xl
+        display: block
+// nav__dropdown
+.nav__dropdown-box
+    display: none
+.nav__dropdown--open .nav__dropdown-box
+    display: block
+.nav__dropdown-box
+    position: absolute
+    margin-top: 11px
+    background: #fff
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,0.2)
+    border-radius: 8px
+    padding: 5px
+    +md
+        margin-top: 0
+        position: static
+        border-radius: 0px
+        box-shadow: none
+        border-top: 1px solid rgba(0,0,0,0.1)
+        padding: 0
+.nav__dropdown-link
+    display: inline-flex
+    align-items: center
+    gap: 9px
+    padding: 10px
+    width: 100%
+    +md
+        padding: 8px 20px
+    &:hover
+        background: #F0F0F0
+        border-radius: 4px
+.nav__dropdown-link-text
+    font-size: 14px
+    color: $black
+.nav__dropdown-box
+    .nav__dropdown-item
+        +md
+            border-bottom: 1px solid rgba(0,0,0,0.1)
+        &:last-child
+            +md
+                border-bottom: none
+.nav__dropdown--open
+    .nav__link
+        svg
+            +md
+                transform: rotate(180deg)

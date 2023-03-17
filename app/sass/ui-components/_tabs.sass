@@ -1,0 +1,20 @@
+/* TABS */
+.tabs
+    position: relative
+.tabs__head
+    color: #000
+    background-color: #fff
+.tabs__item
+    display: none
+.tabs__item--show
+    display: block
+.fade
+    animation: tabContent .5s cubic-bezier(0.6, 0, 0.18, 0.99)
+
+@keyframes tabContent
+    0%
+        opacity: 0
+        transform: scale(0.98)
+    100%
+        opacity: 1
+        transform: scale(1)

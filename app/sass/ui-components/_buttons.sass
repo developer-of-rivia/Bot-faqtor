@@ -1,0 +1,85 @@
+/* Button */
+[data-button]
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    transition: 0.2s ease
+// button--struct
+[data-button~="struct1"]
+    font-weight: 500
+    font-family: 'Rubik'
+a[data-button~="struct2"]
+    font-weight: 500
+    font-family: 'Inter'
+    position: relative
+    &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 1.2px
+// button--gap
+[data-button~="gap1"]
+    gap: 20px
+// button--size
+[data-button~="size1"]
+    padding: 10px 20px
+    font-size: 20px
+    line-height: 24px
+[data-button~="size2"]
+    padding: 14px 20px
+    font-size: 20px
+    line-height: 24px
+[data-button~="size3"]
+    font-size: 20px
+    padding: 14px 18px
+[data-button~="size4"]
+    font-size: 20px
+    line-height: 21px
+[data-button~="size5"]
+    font-size: 16px
+    line-height: 16px
+[data-button~="size6"]
+    font-size: 20px
+    line-height: 28px
+[data-button~="size7"]
+    font-size: 16px
+    line-height: 30px
+    padding: 20px 52px
+[data-button~="size8"]
+    font-size: 16px
+    line-height: 30px
+    padding: 20px 20px 20px 30px
+// button--bradius
+[data-button~="bradius1"]
+    border-radius: 60px
+[data-button~="bradius2"]
+    border-radius: 10px
+// button--colors
+[data-button~="colors1"]
+    color: #fff
+    background: linear-gradient(to right, #27C58B, #029E81)
+    &:hover
+        box-shadow: 0 0 30px 0 rgba(20, 177, 134, 0.5)
+a[data-button~="colors2"]
+    background: linear-gradient(to right, #27C58B, #029E81)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    &:before
+        background: linear-gradient(to right, #27C58B, #029E81)
+        transition: 0.2s ease
+    &:hover
+        &:before
+            transform: translateY(5px)
+[data-button~="colors3"]
+    background: #fff
+    color: #000
+// button--shadow
+[data-button~="shadows1"]
+    box-shadow: 0 0 30px 0 rgba(20, 177, 134, 0.25)
+[data-button~="shadows2"]
+    box-shadow: 0 4px 40px rgba(0,0,0,0.1)
+    &:hover
+        box-shadow: 0 4px 40px rgba(0,0,0,0.05)

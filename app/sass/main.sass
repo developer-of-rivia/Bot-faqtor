@@ -1,0 +1,1264 @@
+/* Imports */
+@import "1 vars.sass"
+@import "2 media-mix.sass"
+@import "3 reset.sass"
+@import "4 layout.sass"
+@import "5 ui.sass"
+@import "6 modules.sass"
+/* Blocks */
+@import "blocks/_header"
+/* Structure */
+/* main */
+.main
+    padding-top: 50px
+    padding-bottom: 90px
+    +lg
+        padding-bottom: 80px
+    +md
+        padding-top: 35px
+    +sm
+        background: url(../img/dist/main-shadow.webp) no-repeat calc(100% + 450px) -450px
+    +xxs
+        padding-bottom: 60px
+.main__wrapper
+    display: flex
+    justify-content: space-between
+    +lg
+        align-items: center
+    +md
+        flex-direction: column
+        gap: 30px
+        align-items: flex-start
+.main__left
+    flex: 510px 0 0
+    +lg
+        flex: 385px 0 1
+    +md
+        flex: auto
+        max-width: 50%
+    +sm
+        max-width: 100%
+.main__incom
+    margin-bottom: 20px
+.main__incom-title
+    font-size: 16px
+    font-weight: 500
+    margin-bottom: 14px
+.main__incom-box
+    display: flex
+    gap: 25px
+    align-items: center
+.main__incom-first
+    padding-right: 25px
+    border-right: 1px solid #888
+.main__title
+    color: $black
+    font-weight: 500
+    font-size: 60px
+    line-height: 64px
+    margin-bottom: 16px
+    +lg
+        font-size: 40px
+        line-height: 100%
+        max-width: 340px
+        margin-bottom: 25px
+    +sm
+        max-width: 100%
+    +xs
+        font-size: 35px
+.main__text
+    color: $black
+    font-size: 25px
+    line-height: 35px
+    margin-bottom: 24px
+    font-family: 'Inter'
+    +lg
+        font-size: 20px
+        line-height: 25px
+    +xs
+        font-size: 16px
+        line-height: 25px
+.main__right
+    position: relative
+    +lg
+        flex: 500px 0 0
+    +md
+        position: absolute
+        right: 0
+        max-width: 47%
+        top: 250px
+    +sm
+        display: none
+.main__shadow
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+/**/
+.main__graphs
+    position: relative
+    z-index: 2
+    overflow: hidden
+.main-graphs-in1
+    position: absolute
+    top: 80px
+    left: 70px
+    +lg
+        top: 50px
+        left: 40px
+        max-width: 400px
+    +md
+        max-width: 80%
+        top: 45px
+.main-graphs-in2
+    position: absolute
+    bottom: 20px
+    left: 60px
+    +lg
+        left: 45px
+        bottom: 20px
+        max-width: 340px
+    +md
+        max-width: 60%
+        left: 38px
+.main-graphs-in3
+    position: absolute
+    bottom: 50px
+    right: 40px
+    +lg
+        bottom: 40px
+        right: 25px
+        max-width: 80px
+    +md
+        bottom: 30px
+        right: 25px
+        max-width: 22%
+.main__shadow-img
+    position: relative
+    width: 1000px
+    height: 610px
+    left: 60px
+    max-width: none
+    +lg
+        width: 750px
+        height: 350px
+        left: 70px
+    +md
+        width: 450px
+        height: 350px
+        left: 0
+/* advs */
+.advs
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 80px
+    +xs
+        padding-bottom: 60px
+.adv__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 52px
+    padding: 30px 67px
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,0.1)
+    border-radius: 15px
+    +lg
+        box-shadow: none
+        max-width: 720px
+        margin: 0 auto
+        padding: 0
+    +sm
+        flex-wrap: wrap
+        gap: 30px 4%
+.adv__item
+    display: inline-flex
+    gap: 48px
+    align-items: center
+    padding-right: 50px
+    border-right: 1px solid rgba(17, 17, 17, 0.2)
+    +lg
+        flex-direction: column
+        gap: 15px
+        padding-right: 0
+        border-right: none
+    +sm
+        width: 48%
+        display: flex
+        align-items: center
+        flex-direction: row
+    +xxs
+        width: 100%
+        justify-content: center
+        text-align: center
+        flex-direction: column
+.adv__item--last
+    padding-right: 0
+    border-right: none
+.adv__item-icon
+    background: linear-gradient(to right, #DBECFB, #CFDDF2)
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    padding: 14px
+    border-radius: 8px
+    position: relative
+    &:before
+        content: ''
+        display: inline-block
+        width: 10px
+        height: 10px
+        position: absolute
+        left: 50%
+        top: 50%
+        box-shadow: 0 0 31px 0 #1F71D2
+.adv__item-icon
+    img
+        border-radius: 80px
+    +sm
+        min-width: 60px
+        min-height: 60px
+.adv__item-text
+    text-align: center
+    font-size: 16px
+    line-height: 25px
+    color: $black
+    +sm
+        text-align: left
+    +xxs
+        text-align: center
+
+
+
+/* trust */
+.trust
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 75px
+.trust__box
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+    gap: 26px 100px
+    max-width: 940px
+    margin: 0 auto
+    +lg
+        max-width: 800px
+        gap: 30px 50px
+    +xs
+        column-gap: 30px
+        column-gap: 30px
+.trust__subtitle
+    margin-bottom: 45px
+    +xs
+        margin-bottom: 20px
+.trust__item
+    filter: grayscale(1)
+    +xs
+        width: auto
+        text-align: center
+        width: 25%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cause */
+.cause
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 20px
+.cause__subtitle
+    margin-bottom: 45px
+    +lg
+        max-width: 520px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 60px
+    +md
+        margin-bottom: 40px
+.cause__item-img
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    border-radius: 8px
+    position: relative
+    width: 60px
+    height: 60px
+    // box-shadow: inset 0px 0px 30px 10px rgba(0,0,0,.1)
+    +lg
+        min-width: 60px
+    img
+        max-width: none
+    &:after
+        content: ''
+        width: 1px
+        height: 1px
+        display: inline-block
+        position: absolute
+        box-shadow: 0px 0px 31px 10px rgba(32, 190, 138, 0.5)
+.cause__item-img--firsts.cause__item-img
+    background: rgba(255, 0, 0, 0.1)
+.cause__item-img--seconds.cause__item-img
+    background: linear-gradient(to right, #E9F9F3, #E6F5F2)
+.cause__item-img--thirds.cause__item-img
+    background: linear-gradient(to right, #ECF5FD, #E6EDF8)
+.cause__box
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 1200px
+    margin: 0 auto
+    row-gap: 40px
+    margin-bottom: 50px
+    +lg
+        row-gap: 45px
+        column-gap: 20px
+        max-width: 900px
+    +md
+        max-width: 660px
+    +xs
+        row-gap: 40px
+.cause__item
+    display: flex
+    align-items: center
+    gap: 20px
+    width: 327px
+    +lg
+        width: 264px
+    +md
+        width: 300px
+    +sm
+        flex-direction: column
+        text-align: center
+        width: 220px
+    +xs
+        width: 100%
+        flex-direction: row
+    +xxs
+        width: 270px
+        margin: 0 auto
+.cause__item-text
+    font-size: 16px
+    line-height: 25px
+    color: $black
+    width: 247px
+    span
+        +lg
+            display: none
+    +md
+        width: 100%
+    +xs
+        text-align: left
+.cause__item.cause__item--button
+    +md
+        width: 100%
+        justify-content: center
+.cause__button-place
+    text-align: center
+    +lg
+        display: none
+/* numbers */
+.numbers
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 80px
+.numbers__box
+    border: 1px solid #2276D4
+    border-radius: 20px
+    display: flex
+    justify-content: space-between
+    padding: 37px 120px 56px 120px
+    background: linear-gradient(to bottom, #EDF8FD, #EEF2FB)
+    position: relative
+    +lg
+        padding: 37px 60px 56px 60px
+    +md
+        flex-wrap: wrap
+        row-gap: 30px
+        padding: 37px 60px
+    +sm
+        padding: 35px
+    +xs
+        padding: 0
+        border: none
+        background: none
+.numbers__item
+    text-align: center
+    +md
+        width: 45%
+    +xxs
+        width: 100%
+.numbers__item-count
+    background: linear-gradient(to right, #409DEC, #024CBB)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 500
+    font-size: 40px
+    line-height: 64px
+    margin-bottom: 5px
+    +md
+        line-height: 50px
+    +sm
+        font-size: 28px
+        line-height: 38px
+    +xxs
+        font-size: 40px
+        line-height: 64px
+.numbers__item-text
+    color: $black
+    font-size: 16px
+    line-height: 25px
+.numbers__updates
+    font-size: 12px
+    line-height: 30px
+    color: rgba(0,0,0,0.5)
+    position: absolute
+    right: 15px
+    bottom: 10px
+    +sm
+        bottom: 5px
+    +xs
+        display: none
+/* clicks */
+.clicks
+    padding-top: 50px
+    margin-top: -50px
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 70px
+        padding-top: 0
+        margin-top: 0
+.clicks__wrapper
+    display: flex
+    gap: 76px
+    +lg
+        flex-direction: column
+        gap: 0
+.clicks__title
+    margin-bottom: 50px
+    text-align: left
+    max-width: 335px
+    +lg
+        max-width: 100%
+        text-align: center
+.clicks__box
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    width: 910px
+    +md
+        flex-wrap: wrap
+        width: 100%
+.clicks__item
+    border-radius: 22px
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,0.1)
+    padding: 25px
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 290px
+    border: 2px solid transparent
+    &:hover
+        border-color: #1BB888
+    +md
+        width: 48%
+    +sm
+        width: 100%
+.clicks__item-link
+    display: inline-flex
+    width: 50px
+    height: 50px
+    border-radius: 50px
+    border: 1px solid rgba(0,0,0,0.2)
+    position: absolute
+    justify-content: center
+    align-items: center
+    right: 25px
+    top: 25px
+    transition: 0.2s ease
+    &:hover
+        background: #27C58B
+        border-color: #27C58B
+        svg
+            fill: #fff
+.clicks__item-name
+    font-size: 25px
+    font-weight: 700
+    color: $black
+    margin-bottom: 20px
+.clicks__item-text
+    font-weight: 500
+    font-size: 16px
+    line-height: 25px
+    margin-top: auto
+.clicks__item-icon
+    margin-bottom: 20px
+    height: 60px
+.clicks__box
+    .clicks__item:last-child
+        +md
+            width: 100%
+/* prot */
+.prot
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 100px
+    +md
+        padding-bottom: 60px
+    +xs
+        padding-bottom: 60px
+.prot__title
+    +lg
+        max-width: 650px
+        margin-left: auto
+        margin-right: auto
+    +xs
+        font-size: 20px
+        line-height: 130%
+.prot__subtitle
+    margin-bottom: 40px
+    +xs
+        margin-bottom: 20px
+.prot__tabs-header
+    display: flex
+    gap: 11px
+    justify-content: center
+    margin: 0 auto
+    margin-bottom: 110px
+    max-width: 1200px
+    +lg
+        max-width: 765px
+        margin-bottom: 70px
+    +md
+        margin-bottom: 30px
+    +xs
+        gap: 5px
+    +xxs
+        font-size: 13px
+.prot__tabs-head
+    background: rgba(189, 232, 221, 0.3)
+    width: 24%
+    text-align: center
+    font-weight: 500
+    font-size: 16px
+    border-radius: 12px
+    padding: 22px
+    transition: 0.2s ease
+    cursor: pointer
+    color: #039F82
+    border: 2px solid transparent
+    +sm
+        padding: 16px 10px
+    +xs
+        padding: 10px 17px
+    &:hover
+        background: rgba(189, 232, 221, 0.6)
+    &.tabs__item--show
+        border-color: #039F82
+.prot__content
+    display: flex
+    justify-content: space-between
+    max-width: 1200px
+    margin: 0 auto
+    +md
+        flex-direction: column
+        max-width: 550px
+.prot__left
+    width: 470px
+    padding-top: 12px
+    +lg
+        width: 375px
+    +md
+        width: 100%
+        text-align: center
+        margin-bottom: 40px
+    +sm
+        text-align: left
+        margin-bottom: 0
+.prot__right
+    position: relative
+    right: -50px
+    +lg
+        right: 0
+        max-width: 520px
+    +md
+        max-width: 100%
+        text-align: center
+    +sm
+        display: none
+.prot__item--1
+    .prot__right
+        img
+            box-shadow: -12px 20px 50px 5px rgba(76, 223, 154, 0.3)
+.prot__item--2
+    .prot__right
+        img
+            box-shadow: -12px 20px 50px 5px rgba(174, 191, 237, 0.3)
+.prot__item--3
+    .prot__right
+        img
+            box-shadow: -12px 20px 50px 5px rgba(235, 149, 87, 0.2)
+.prot__item--4
+    .prot__right
+        img
+            box-shadow: -12px 20px 50px 5px rgba(158, 129, 239, 0.3)
+.prot__item--5
+    .prot__right
+        img
+            box-shadow: -12px 20px 50px 5px rgba(76, 223, 154, 0.3)
+.prot__content-title
+    text-align: left
+    font-size: 36px
+    line-height: 120%
+    max-width: 380px
+    +md
+        text-align: center
+        font-size: 28px
+        max-width: 100%
+    +sm
+        font-size: 20px
+        line-height: 100%
+        text-align: left
+.prot__content-title--2.prot__content-title
+    line-height: 100%
+.prot__content-text
+    color: rgba(0,0,0,0.6)
+    margin-bottom: 62px
+    font-weight: 500
+    line-height: 130%
+    +md
+        margin-bottom: 25px
+    *
+        font-family: 'Inter'
+        font-weight: 500
+    a
+        color: #27C58B
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+    p
+        margin-bottom: 20px
+    h3
+        margin-bottom: 20px
+        font-weight: 700
+        font-size: 20px
+        line-height: 130%
+        color: $black
+.prot__content-button-area
+    display: flex
+    align-items: center
+    gap: 30px
+    +lg
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+    +md
+        align-items: center
+    +sm
+        align-items: flex-start
+.prot__content-button--step4
+    +md
+        font-size: 15px
+/* byelama-area */
+.byelama-area
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 80px
+    +xs
+        padding-bottom: 60px
+/* byelama */
+.byelama
+    border-radius: 20px
+    background: #F7F9FD
+    padding: 37px 40px
+    width: 800px
+    margin: 0 auto
+    +md
+        width: 100%
+    +xs
+        padding: 34px
+.byelama__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 27px
+    +xs
+        flex-direction: column
+        align-items: center
+        gap: 15px
+.byelama__title
+    font-weight: 500
+    font-size: 30px
+    line-height: 36px
+    color: $black
+    +sm
+        font-size: 25px
+    +xs
+        font-size: 30px
+    +xxs
+        text-align: center
+.byelama__text
+    margin-bottom: 40px
+    display: flex
+    flex-direction: column
+    gap: 26px
+    font-size: 20px
+    line-height: 24px
+.byelama__buttons
+    display: flex
+    gap: 30px
+    align-items: center
+    +xxs
+        flex-direction: column
+        gap: 20px
+        align-items: center
+/* calc */
+.calc
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 80px
+    +xs
+        padding-bottom: 60px
+.calc__wrapper
+    background: #fff
+    border-radius: 20px
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,0.1)
+    display: flex
+    gap: 52px
+    padding: 53px 50px
+    justify-content: space-between
+    +lg
+        flex-direction: column
+        width: 700px
+        margin: 0 auto
+        padding: 40px
+    +md
+        width: 100%
+        gap: 30px
+    +xxs
+        padding: 16px
+.calc__left
+    width: 420px
+    display: flex
+    flex-direction: column
+    +lg
+        width: 100%
+.calc__title
+    text-align: left
+    line-height: 100%
+    margin-bottom: 20px
+    +lg
+        max-width: 420px
+    +xs
+        max-width: 300px
+        margin-bottom: 10px
+.calc__text
+    font-weight: 500
+    line-height: 130%
+    color: rgba(0,0,0,0.5)
+    max-width: 400px
+    +lg
+        max-width: 100%
+    +xs
+        display: none
+.calculator__box
+    width: 620px
+    +lg
+        width: 100%
+.calculator__group
+    display: flex
+    gap: 6px
+    margin-bottom: 20px
+    +sm
+        flex-direction: column
+.calculator__item
+    display: flex
+    flex-direction: column
+.calculator__item-label
+    font-weight: 600
+    line-height: 20px
+    font-size: 14px
+    margin-bottom: 10px
+.calc__button-area
+    margin-top: auto
+    +xs
+        text-align: center
+.calc__connect--1
+    +lg
+        display: none
+.calc__connect--2
+    display: none
+    +lg
+        display: inline-block
+.calculator__item--50
+    width: 49%
+    +sm
+        width: 100%
+.calculator__item--100
+    width: 100%
+.calculator__item-input
+    width: 100%
+    height: 56px
+    padding-left: 14px
+.calculator__lost-title
+    font-weight: 700
+    font-size: 24px
+    margin-bottom: 18px
+.calculator__lost-item
+    display: flex
+    justify-content: space-between
+.calculator__lost
+    width: 100%
+    border-radius: 10px
+    margin-top: 50px
+.calculator__lost-wrapper
+    width: 100%
+.text-info.error.d-none
+    display: none
+.calculator__item-select
+    height: 56px
+    padding-left: 14px
+    font-size: 14px
+    appearance: none
+.calculator__lost-results
+    padding: 15px 17px
+    background: #F7F9FD
+    .calculator__lost-item
+        &:first-child
+            padding-bottom: 11px
+            border-bottom: 1px solid rgba(0,0,0,0.1)
+            margin-bottom: 11px
+.calculator__lost-item
+    .year
+        color: rgba(212, 54, 54, 0.8)
+        font-weight: 700
+        font-family: 'Inter'
+    .month
+        color: $black
+        font-weight: 700
+        font-family: 'Inter'
+/* cases */
+.cases
+    padding-top: 50px
+    padding-bottom: 48px
+    background: #F7F9FD
+    +xs
+        padding-top: 30px
+        padding-bottom: 30px
+.cases__subtitle
+    margin-bottom: 43px
+    +lg
+        max-width: 660px
+        margin-left: auto
+        margin-right: auto
+.cases__box
+    display: flex
+    justify-content: center
+    gap: 32px
+    margin-bottom: 43px
+    +lg
+        gap: 15px
+    +sm
+        flex-direction: column
+        align-items: center
+        gap: 20px
+.cases__item
+    border-radius: 20px
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,0.1)
+    padding: 25px 13px
+    position: relative
+    background: #fff
+    border: 2px solid transparent
+    +sm
+        max-width: 380px
+    &:hover
+        border-color: #27C58B
+.cases__item-theme
+    padding-left: 12px
+    span
+        color: $black
+        display: block
+    p
+        font-weight: 600
+        color: $black
+.cases__item-img
+    margin-top: 23px
+.cases__item-link
+    display: inline-flex
+    width: 40px
+    height: 40px
+    border-radius: 50px
+    border: 1px solid rgba(0,0,0,0.2)
+    position: absolute
+    justify-content: center
+    align-items: center
+    right: 25px
+    top: 25px
+    transition: 0.2s ease
+    &:hover
+        background: #27C58B
+        border-color: #27C58B
+        svg
+            fill: #fff
+.cases__buttons
+    display: flex
+    flex-direction: column
+    gap: 20px
+    justify-content: center
+    align-items: center
+.cases__item-saving
+    display: flex
+    gap: 2px
+    margin-top: 10px
+    +xs
+        font-size: 14px
+    span
+        font-weight: 600
+.cases__box
+    .cases__item:last-child
+        +lg
+            display: none
+.cases__item-body
+    +lg
+        display: flex
+        gap: 4px
+    +xs
+        font-size: 14px
+
+    
+
+
+/* comments */
+.comments
+    padding-top: 130px
+    padding-bottom: 130px
+    +md
+        padding-top: 60px
+        padding-bottom: 80px
+    +xs
+        padding-top: 40px
+.comments__title
+    margin-bottom: 50px
+    text-align: left
+    +sm
+        margin-bottom: 20px
+    +xs
+        text-align: center
+.comments__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    row-gap: 20px
+.comments__item
+    padding: 20px 30px
+    border-radius: 15px
+    &:hover
+        box-shadow: 0 4px 40px 0 rgba(0,0,0,0.15)
+.comments__item-name
+    font-weight: 700
+    font-size: 14px
+    line-height: 20px
+    color: $black
+.comments__item-country
+    line-height: 20px
+    font-size: 14px
+    color: $black
+.comments__item-info
+    padding-bottom: 12px
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    margin-bottom: 12px
+.comments__item-client
+    margin-bottom: 16px
+    font-size: 14px
+    line-height: 22px
+    font-family: 'Inter'
+    font-weight: 400
+.comments__item-admins
+    span
+        font-size: 14px
+        font-weight: 700
+        line-height: 20px
+        margin-bottom: 2px
+    p
+        font-size: 14px
+        font-family: 'Inter'
+        line-height: 22px
+.comments__wrapper
+    .comments__item:first-child
+        width: 490px
+        background: linear-gradient(to bottom, #FEF9F5, #FFFEF2)
+    .comments__item:nth-child(2)
+        width: 683px
+        background: linear-gradient(to bottom, #F9FDF3, #FFFFFF)
+    .comments__item:nth-child(3)
+        width: 683px
+        background: linear-gradient(to bottom, #F6FCFE, #F7F9FD)
+.comments__buttons
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding-right: 102px
+    padding-top: 54px
+    +lg
+        width: 470px
+        height: auto
+        justify-content: center
+        align-items: center
+        padding-right: 0
+        padding-top: 0
+    +md
+        width: 100%
+    +xs
+        width: 275px
+        margin-left: auto
+        margin-right: auto
+    .comments__button
+        +xs
+            width: 100%
+.comments .comments__wrapper .comments__item
+    +lg
+        width: 470px
+    +md
+        width: 100%
+/* qa */
+.qa
+    padding-bottom: 130px
+    +lg
+        padding-bottom: 100px
+    +md
+        padding-bottom: 80px
+    +xs
+        padding-bottom: 60px
+.qa__subtitle
+    margin-bottom: 53px
+.qa__accordions
+    display: flex
+    flex-direction: column
+    gap: 15px
+/* get */
+.get
+    padding-bottom: 130px
+    +md
+        padding-bottom: 100px
+    +xs
+        padding-bottom: 60px
+.get__title
+    margin-bottom: 40px
+.get__button-cell
+    text-align: center
+/* cont */
+.cont
+    height: 500px
+    +md
+        height: auto
+.cont__container
+    height: 100%
+    +lg
+        width: 960px
+    +xs
+        padding: 0
+.cont__title
+    text-align: left
+    +xs
+        font-size: 40px
+        line-height: 44px
+.cont__wrapper
+    display: flex
+    position: relative
+    justify-content: space-between
+    height: 100%
+    border-top: 1px solid rgba(0,0,0,0.2)
+    +md
+        flex-direction: column
+        justify-content: flex-start
+        gap: 30px
+    +sm
+        gap: 20px
+.cont__left
+    width: 27%
+    +lg
+        width: 40%
+    +md
+        padding-top: 30px
+    +xs
+        padding-left: 15px
+.cont__right
+    width: 65%
+    position: relative
+    +md
+        width: 100%
+        height: 400px
+    +xs
+        height: 350px
+.cont__map
+    background: gray
+    position: absolute
+    left: 0
+    top: 0
+    width: 944px
+    height: 100%
+    +lg
+        width: 830px
+    +md
+        position: static
+        width: 100%
+    div
+        height: 100%
+    iframe
+        width: 100%
+        height: 100%
+        border: none
+        filter: grayscale(1)
+.cont__left
+    padding-top: 60px
+    +md
+        width: 100%
+        padding-top: 40px
+.cont__text
+    font-size: 16px
+    color: $black
+    line-height: 19px
+    margin-bottom: 130px
+    +lg
+        max-width: 316px
+    +md
+        margin-bottom: 60px
+    +sm
+        margin-bottom: 40px
+.cont__info
+    +md
+        display: flex
+        width: 100%
+        justify-content: space-between
+    +sm
+        flex-direction: column
+.cont__info-item
+    margin-bottom: 20px
+.cont__info-title
+    font-size: 24px
+    line-height: 28px
+    margin-bottom: 10px
+.cont__info-mail
+    background: linear-gradient(to right, #27C58B, #029E81)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    display: block
+    margin-bottom: 10px
+    &:hover
+        text-decoration: underline
+        -webkit-background-clip: unset
+        -webkit-text-fill-color: unset
+        background: none
+        color: #27C58B
+.cont__info-phone
+    font-size: 16px
+    color: $black
+    &:hover
+        text-decoration: underline
+
+.map-circle-placemark
+    background: red
+/* footer */
+.footer
+    padding-top: 46px
+    background: #F7F9FD
+.footer__wrapper
+    padding-bottom: 21px
+.footer__box
+    display: flex
+    gap: 41px
+    margin-bottom: 100px
+    +lg
+        flex-wrap: wrap
+        gap: 40px 118px
+        margin-bottom: 50px
+    +md
+        gap: 50px 0
+        justify-content: space-between
+    +xxs
+        gap: 40px 0
+.footer__title
+    font-weight: 700
+    font-size: 20px
+    line-height: 24px
+    margin-bottom: 12px
+.footer__link
+    line-height: 19px
+    color: $black
+    &:hover
+        text-decoration: underline
+.footer__link.footer__link--hl
+    color: #27C58B
+    &:hover
+        color: #03955F
+.footer__menu
+    display: flex
+    flex-direction: column
+    gap: 15px
+.footer__payments-box
+    display: flex
+    gap: 20px
+    align-items: center
+    margin-bottom: 15px
+    +xs
+        max-width: 60%
+        flex-wrap: wrap
+    +xxs
+        max-width: 250px
+.footer__payments-text
+    color: $black
+    font-size: 16pk
+.footer__bottom
+    padding: 18px 60px
+    border-top: 1px solid rgba(0,0,0,0.2)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +xs
+        padding: 18px 30px
+    +xxs
+        flex-direction: column
+        padding: 18px 20px
+        gap: 15px
+        align-items: flex-start
+.footer__column
+    +lg
+        width: 280px
+    +md
+        width: 45%
+    +xxs
+        width: 100%
+.footer__socials
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 11px
+.footer__social
+    width: 24px
+    height: 24px
+    margin: 0 3px
+    svg
+        width: 100%
+        height: 100%
+        transition: 0.2s ease
+        &:hover
+            fill: #27C58B

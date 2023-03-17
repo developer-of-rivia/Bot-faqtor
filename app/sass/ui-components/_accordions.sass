@@ -1,0 +1,70 @@
+/* ACCORDION */
+.accordion__content
+    max-height: 0
+    opacity: 0
+    overflow: hidden
+    will-change: max-height
+    transition: all 0.3s ease-out
+    box-sizing: content-box
+.open .accordion__content
+    opacity: 1
+.accordion__icon-close
+    display: none
+.accordion.open .accordion__icon-close
+    display: block
+.accordion.open .accordion__icon-open
+    display: none
+/**/
+.accordion
+    border-radius: 10px
+    background: #FCFCFC
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,0.1)
+    padding: 22px 40px
+    padding-right: 20px
+    +xs
+        padding: 14px
+.accordion__content
+    color: #848484
+    line-height: 19px
+    a
+        color: #27C58B
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+.accordion__control
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    cursor: pointer
+    background: none
+.accordion__icon
+    position: relative
+    display: inline-flex
+    min-width: 36px
+    min-height: 36px
+    justify-content: center
+    align-items: center
+    border-radius: 50px
+    background: #E3EDFF
+.accordion__icon svg
+    width: inherit
+    height: inherit
+    left: 0
+    top: 0
+    transition: 0.2s ease
+    width: 16px
+    height: 16px
+.accordion__title
+    font-size: 25px
+    line-height: 30px
+    color: #161616
+    text-align: left
+    padding-right: 15px
+    +md
+        font-size: 20px
+    +xs
+        font-size: 16px
+        line-height: 130%
+.accordion.open .accordion__content
+    margin-top: 16px

@@ -1,0 +1,50 @@
+/* reset */
+html
+	scroll-behavior: smooth
+@media screen and (min-width: 992px)
+	html
+		overflow: hidden visible
+body
+	overflow: hidden visible
+*,
+*:before,
+*:after
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+img
+	max-width: 100%
+li
+	list-style: none
+a
+	text-decoration: none
+	display: inline-block
+input, button, textarea
+	outline: none
+button
+	border: none
+ul
+	li
+		&:last-child
+			margin-right: 0
+			margin-bottom: 0
+		&:first-child
+			margin-left: 0
+			margin-top: 0
+.text
+	p
+		&:last-child
+			margin-bottom: 0
+a, button
+	cursor: pointer
+	display: inline-block
+h1,h2,h3,h4,h5,h6
+	margin: 0
+svg
+	width: 15px
+	height: 15px
+section
+	overflow: hidden
+span
+	font-weight: inherit
+	font-family: inherit

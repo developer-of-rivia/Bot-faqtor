@@ -1,0 +1,373 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth
+}
+body {
+  overflow: hidden visible
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+img {
+  max-width: 100%
+}
+li {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+button,
+input,
+textarea {
+  outline: 0
+}
+button {
+  border: none
+}
+ul li:last-child {
+  margin-right: 0;
+  margin-bottom: 0
+}
+ul li:first-child {
+  margin-left: 0;
+  margin-top: 0
+}
+.text p:last-child {
+  margin-bottom: 0
+}
+a,
+button {
+  cursor: pointer;
+  display: inline-block
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto
+}
+.body-stop {
+  overflow: hidden!important
+}
+.hidden {
+  display: none
+}
+.button {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  border-radius: 5px
+}
+.button--disabled {
+  background: #dedbe1;
+  color: #7e7984;
+  cursor: default
+}
+.button--color-default {
+  background: #612bd3;
+  color: #fff
+}
+.button--color-default:hover {
+  background: #5126ac
+}
+.button--color-dark {
+  background: #391881;
+  color: #fff
+}
+.button--color-dark:hover {
+  background: #612bd3
+}
+.button--color-pink {
+  background: #f5f0ff;
+  color: #612bd3
+}
+.button--color-pink:hover {
+  background: #eee5ff
+}
+.button--size-small {
+  padding: 8px 16px;
+  font-size: 14px
+}
+.button--size-regular {
+  padding: 10px 18px;
+  font-size: 16px
+}
+.button--size-medium {
+  padding: 10px 20px;
+  font-size: 18px
+}
+.button--size-large {
+  padding: 12px 24px;
+  font-size: 20px
+}
+.button--style-bordered {
+  border: 3px solid
+}
+.field--def {
+  display: inline-block;
+  width: 100%;
+  height: 100%
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #000
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #000
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #000
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #000
+}
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%
+}
+.checkbox input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  margin-right: 10px
+}
+.checkbox input[type=checkbox]:hover {
+  display: inline-block
+}
+.checkbox input[type=checkbox]:checked {
+  background: url(../img/checkbox-checkmark.png) center center no-repeat
+}
+.checkbox input[type=checkbox]:disabled {
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%)
+}
+.radio input[type=radio] {
+  display: none
+}
+.radio label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: green
+}
+.radio label:before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  border: 1px solid #ccc
+}
+.radio input[type=radio]:checked + label:before {
+  background: url(../img/checkbox-checkmark.png) center center no-repeat
+}
+.radio label:hover:before {
+  display: inline-block
+}
+.radio input[type=radio]:disabled + label:before {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  background: red
+}
+.tumbler__switch {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 36px;
+  height: 22px;
+  padding: 3px;
+  border-radius: 50px;
+  vertical-align: top;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  background: #dbdbdb;
+  cursor: pointer
+}
+.tumbler__switch:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background: #fff;
+  -webkit-transition: .15s;
+  -o-transition: .15s;
+  transition: .15s
+}
+.tumbler input[type=checkbox] {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0
+}
+.tumbler input[type=checkbox]:checked + .tumbler__switch {
+  background: #75a55f
+}
+.tumbler input[type=checkbox]:checked + .tumbler__switch:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px)
+}
+.select__head {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px
+}
+.select__head--active .select__ungle {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.select__box {
+  display: none
+}
+.select__box--active {
+  display: block
+}
+.select__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 5px 20px;
+  border: 1px solid #ccc
+}
+.select__ungle {
+  margin-left: auto
+}
+.select__item--curent {
+  color: red
+}
+.upload-has__delete {
+  display: none
+}
+.upload-has__delete--open {
+  display: block
+}
+.title--def {
+  color: #000
+}
+.btn--def,
+.btn--def:hover {
+  display: inline-block
+}
+.text--def {
+  color: #000
+}
+.text-area p:last-child {
+  margin-bottom: 0
+}
+.tabs__links--def {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.tabs__link--def {
+  display: inline-block
+}
+.slider-arrows--def {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.slider-dots--def .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.slider-dots--def .slick-dots li {
+  margin: 0 5px
+}
+.slider-dots--def .slick-dots li button {
+  display: inline-block;
+  background: gray;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer
+}
+.slider-dots--def .slick-dots li.slick-active button {
+  background: green
+}
+.slick-arrow {
+  cursor: pointer
+}
+@media screen and (max-width:1260px) {
+  .container {
+    width: 950px
+  }
+}
+@media (max-width:1260px) {
+  .da {
+    display: block
+  }
+  .net {
+    display: block
+  }
+  .aye {
+    display: block
+  }
+}
+@media screen and (max-width:991px) {
+  .container {
+    width: 620px
+  }
+}
+@media screen and (max-width:650px) {
+  .container {
+    width: 290px
+  }
+}
