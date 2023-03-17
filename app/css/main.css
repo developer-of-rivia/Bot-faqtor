@@ -2301,6 +2301,18 @@ a[data-button~="colors2"]:hover:before {
   }
 }
 
+@media (max-width: 480px) {
+  .prot__content-button--step4 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prot__content-button--step2 {
+    font-size: 13px;
+  }
+}
+
 .prot__content-list {
   display: flex;
   flex-direction: column;
