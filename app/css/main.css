@@ -601,7 +601,7 @@ a[data-button~="colors2"]:hover:before {
   font-size: 40px;
   color: #111;
   text-align: center;
-  line-height: 50px;
+  line-height: 100%;
 }
 
 @media (max-width: 991px) {
