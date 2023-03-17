@@ -180,6 +180,10 @@ a[data-button~="struct2"]:before {
   height: 1.2px;
 }
 
+a[data-button~="struct2"]:hover:before {
+  display: none;
+}
+
 [data-button~="gap1"] {
   gap: 20px;
 }
