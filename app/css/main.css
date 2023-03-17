@@ -1033,6 +1033,10 @@ a[data-button~="colors2"]:hover:before {
   }
 }
 
+.main__container {
+  position: relative;
+}
+
 .main__wrapper {
   display: flex;
   justify-content: space-between;
@@ -1148,9 +1152,10 @@ a[data-button~="colors2"]:hover:before {
 }
 
 .main__right {
-  position: relative;
-  width: 720px;
-  height: 529px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1370px) {
@@ -1185,16 +1190,17 @@ a[data-button~="colors2"]:hover:before {
 .main__graphs {
   position: relative;
   z-index: 2;
-  overflow: hidden;
+  width: 720px;
+  margin-left: auto;
   height: 100%;
-  width: 100%;
 }
 
 .main__graphs1 {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 30px;
   box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .main__graphs2 {
@@ -1202,6 +1208,7 @@ a[data-button~="colors2"]:hover:before {
   right: 0;
   bottom: 0;
   box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.21);
+  border-radius: 10px;
 }
 
 .main-graphs-in1 {
