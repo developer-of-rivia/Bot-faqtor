@@ -1,5 +1,86 @@
 document.addEventListener('DOMContentLoaded', function() {
-	// dropdown
+	
+    // counter up
+//     function VanillaCounter() {
+//         let elements = document.querySelectorAll('[data-vanilla-counter]')
+//         elements.forEach(i => {
+//             let data = {
+//                 startAt: parseInt(i.getAttribute('data-start-at')),
+//                 endAt: parseInt(i.getAttribute('data-end-at')),
+//                 delay: parseInt(i.getAttribute('data-delay')) || 0,
+//                 format: '{}',
+//                 time: parseInt(i.getAttribute('data-time')) || 0.1
+//             }
+//             if (i.getAttribute('data-format')) {
+//                 data.format = i.getAttribute('data-format')
+//             } else if (i.innerHTML != "") {
+//                 data.format = i.innerHTML
+//             }
+//             console.log(data.format)
+//             if (data.startAt == null) {
+//                 throw new Error('data-start-at attribute is required')
+//             }
+//             if (data.endAt == null) {
+//                 throw new Error('data-end-at attribute is required')
+//             }
+//             var counter = data.startAt
+//             i.innerHTML = data.format.replace('{}', counter)
+//             var intervalTime = Math.ceil(data.time / (data.endAt - data.startAt))
+//             setTimeout(() => {
+//                 var interval = setInterval(intervalHandler, intervalTime)
+//                 function intervalHandler() {
+//                     counter += (data.endAt - data.startAt) / Math.abs(data.endAt - data.startAt) * 1
+//                     i.innerHTML = data.format.replace('{}', counter)
+//                     if (counter == data.endAt) {
+//                         clearInterval(interval)
+//                     }
+//                 }
+//             }, data.delay)
+//         })
+//     }
+//    // Получаем нужный элемент
+//     var element = document.querySelector('.numbers__box');
+//         var Visible = function (target) {
+//         // Все позиции элемента
+//         var targetPosition = {
+//             top: window.pageYOffset + target.getBoundingClientRect().top,
+//             left: window.pageXOffset + target.getBoundingClientRect().left,
+//             right: window.pageXOffset + target.getBoundingClientRect().right,
+//             bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+//             },
+//             // Получаем позиции окна
+//             windowPosition = {
+//             top: window.pageYOffset,
+//             left: window.pageXOffset,
+//             right: window.pageXOffset + document.documentElement.clientWidth,
+//             bottom: window.pageYOffset + document.documentElement.clientHeight
+//             };
+
+//         if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+//             targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+//             targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+//             targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+//             // Если элемент полностью видно, то запускаем следующий код
+//             console.clear();
+//             //console.log('Вы видите элемент :)');
+//             VanillaCounter();
+//         } else {
+//             // Если элемент не видно, то запускаем этот код
+//             //console.clear();
+//         };
+//     };
+//     // Запускаем функцию при прокрутке страницы
+//     window.addEventListener('scroll', function() {
+//         Visible(element);
+//     });
+    
+
+    
+    
+    
+    
+    
+    // dropdown
     let dropdowns = document.querySelectorAll('.nav__dropdown');
 	dropdowns.forEach(dropdown => {
         document.addEventListener('click', (e) => {

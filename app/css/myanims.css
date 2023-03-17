@@ -1,3 +1,15 @@
+/* TYPING */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 270px }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+
+
 /* push release - иконки на первом экране */
 .pushRelease { animation-name: pushRelease; animation-duration: 1s; }
 @keyframes pushRelease {
@@ -47,7 +59,7 @@
 .flipX { animation-name: flipX; animation-duration: 1s; }
 @keyframes flipX {
     from {
-        transform: perspective(600px) rotateX(-180deg);
+        transform: perspective(600px) rotateX(-340deg);
         opacity: 0;
     }
     to { transform: perspective(600px) rotateX(-360deg) }
