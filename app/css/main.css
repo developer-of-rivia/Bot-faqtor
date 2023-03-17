@@ -159,6 +159,10 @@ span {
   transition: 0.2s ease;
 }
 
+[data-button] svg {
+  transition: 0.2s ease;
+}
+
 [data-button~="struct1"] {
   font-weight: 500;
   font-family: 'Rubik';
@@ -271,6 +275,15 @@ a[data-button~="colors2"]:hover:before {
   color: #000;
 }
 
+[data-button~="colors3"]:hover {
+  color: #029E81;
+  text-decoration: underline;
+}
+
+[data-button~="colors3"]:hover svg {
+  fill: #029E81;
+}
+
 [data-button~="shadows1"] {
   box-shadow: 0 0 30px 0 rgba(20, 177, 134, 0.25);
 }
@@ -280,7 +293,7 @@ a[data-button~="colors2"]:hover:before {
 }
 
 [data-button~="shadows2"]:hover {
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* INPUT */
@@ -1925,6 +1938,7 @@ a[data-button~="colors2"]:hover:before {
   line-height: 25px;
   margin-top: auto;
   font-family: 'Inter';
+  color: #111;
 }
 
 .clicks__item-icon {
