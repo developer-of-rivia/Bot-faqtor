@@ -242,11 +242,13 @@ a[data-button~="struct2"]:hover:before {
 
 [data-button~="colors1"] {
   color: #fff;
+  transition: 0.2s ease;
   background: linear-gradient(to right, #27C58B, #029E81);
 }
 
 [data-button~="colors1"]:hover {
-  box-shadow: 0 0 30px 0px rgba(20, 177, 134, 0.7);
+  box-shadow: none;
+  background: linear-gradient(to right, #6695e2, #6695e2);
 }
 
 a[data-button~="colors2"] {
