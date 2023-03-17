@@ -94,7 +94,7 @@
         position: absolute
         right: 0
         max-width: 47%
-        top: 250px
+        top: 0
     +sm
         display: none
 .main__shadow
@@ -102,6 +102,8 @@
     right: 100px
     top: 0
     z-index: 1
+    +md
+        right: 0
 /**/
 .main__graphs
     position: relative
@@ -117,11 +119,17 @@
     +lg
         left: auto
         right: 0
+        top: 30px
+        max-width: 500px
 .main__graphs2
     position: absolute
     right: 0
     bottom: 0
     border-radius: 10px    
+    +lg
+        right: -25px
+        max-width: 500px
+        bottom: 30px
 .main-graphs-in1
     position: absolute
     top: 90px
@@ -169,7 +177,8 @@
     +md
         width: 450px
         height: 350px
-        left: 0
+        left: auto
+        right: 0
 /* advs */
 .advs
     padding-bottom: 130px
@@ -613,7 +622,7 @@
     width: 470px
     padding-top: 12px
     +lg
-        width: 375px
+        width: 420px
     +md
         width: 100%
         text-align: center
@@ -625,11 +634,12 @@
     position: relative
     right: -50px
     +lg
-        right: 0
-        max-width: 520px
+        right: -130px
+        max-width: 670px
     +md
         max-width: 100%
         text-align: center
+        right: 0
     +sm
         display: none
 .prot__item--1
@@ -684,6 +694,9 @@
             text-decoration: none
     p
         margin-bottom: 20px
+        br
+            +lg
+                display: none
     h3
         margin-bottom: 20px
         font-weight: 700
