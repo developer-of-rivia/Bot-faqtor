@@ -1875,8 +1875,8 @@ a[data-button~="colors2"]:hover:before {
 }
 
 .clicks__item:hover .clicks__item-link {
-  background: #27C58B;
-  border-color: #27C58B;
+  background: #1BB888;
+  border-color: #1BB888;
 }
 
 .clicks__item:hover .clicks__item-link svg {
