@@ -24,9 +24,75 @@
 	<!-- Базовые стили CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<!-- endbuild -->
+	<!-- Внешние скрипты -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160917634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160917634-1', {
+            'custom_map': {
+                'dimension1': 'Botfaqtor'
+            }
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://botfaqtor.ru",
+            "logo": "https://botfaqtor.ru/assets/remaster/images/landing/brand.svg"
+        }
+    </script>
+	<!-- Begin Verbox {literal} -->
+    <script type='text/javascript'>
+        (function (d, w, m) {
+            window.supportAPIMethod = m;
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.id = 'supportScript';
+            s.charset = 'utf-8';
+            s.async = true;
+            var id = 'fa8d6ba2fa033b89a545e3d9db332dae';
+            s.src = 'https://admin.verbox.ru/support/support.js?h=' + id;
+            var sc = d.getElementsByTagName('script')[0];
+            w[m] = w[m] || function () {
+                (w[m].q = w[m].q || []).push(arguments);
+            };
+            if (sc) sc.parentNode.insertBefore(s, sc);
+            else d.documentElement.firstChild.appendChild(s);
+        })(document, window, 'Verbox');
+    </script>
+    <!-- {/literal} End Verbox -->
 </head>
 
 <body>
+	<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(86566686, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script> <noscript>
+        <div><img src="https://mc.yandex.ru/watch/86566686" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> <!-- /Yandex.Metrika counter -->
 	<!-- header -->
 	<header class="header">
 		<div class="header__container">
@@ -1237,7 +1303,96 @@
 	</footer>
 
 
+	<div class="roll-network">
+        <div class="block-roll">
+            <a href="#" onclick="Verbox('openSupport'); return false;" class="message-list">Задать вопрос</a>
+            <div class="ico-roll-network"></div>
+            <div class="block-roll-network">
+                <div class="item"><a target="_blank" href="#" class="chat-chat-icon"
+                        onclick="Verbox('openSupport'); return false;">Задать вопрос</a></div>
+                <div class="item"><a target="_blank" href="tel:+79251326680" class="chat-phone-icon">Позвонить</a></div>
+                <div class="item"><a target="_blank" href="tg://resolve?domain=BotfaqtorT_bot"
+                        class="chat-teleg-icon">Написать в Telegram</a></div>
+                <div class="item"><a target="_blank" href="https://api.whatsapp.com/send?phone=79251326680"
+                        class="chat-whats-icon">Написать в Whatsapp</a></div>
+                <div class="item"><a target="_blank" href="viber://pa?chatURI=botfaqtor-ru"
+                        class="chat-viber-icon">Написать в Viber</a></div>
+                <div class="item"><a target="_blank" href="https://vk.com/write-169372604" class="chat-vk-icon">Написать
+                        в VK</a></div>
+                <div class="item"><a target="_blank" href="https://www.facebook.com/messages/t/359439317992661"
+                        class="chat-fb-icon">Написать в Facebook</a></div>
+            </div>
+        </div>
+    </div>
 
+
+	<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMFZDKB" height="0" width="0"
+		style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+	<script>
+        var fired = false;
+        window.addEventListener('scroll', () => {
+            if (fired === false) {
+                fired = true;
+                setTimeout(() => {
+                    var yaParams = {};
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'https://ip.up66.ru/', true);
+                    xhr.onload = function () {
+                        yaParams.ip = this.responseText;
+                    }
+                    xhr.send();
+
+                    (function (m, e, t, r, i, k, a) {
+                        m[i] = m[i] || function () {
+                            (m[i].a = m[i].a || []).push(arguments)
+                        };
+                        m[i].l = 1 * new Date();
+                        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k
+                            .src = r, a.parentNode.insertBefore(k, a)
+                    })
+                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+                    ym(49731991, "init", {
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+
+                }, 1000)
+            }
+        });
+
+        document.write("<a href='//www.liveinternet.ru/click' " +
+            "target=_blank><img src='//counter.yadro.ru/hit?t39.1;r" +
+            escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+                ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                    screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document
+                .URL) +
+            ";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+            "' alt='' title='LiveInternet' " +
+            "border='0' width='31' height='31' style=\"position:absolute;left:-10000px;top:-10000px;\" ><\/a>"
+        );
+    </script>
+
+
+
+
+	<!--LiveInternet counter-->
+	<script type="text/javascript">
+		document.write("<a href='//www.liveinternet.ru/click' " +
+			"target=_blank><img src='//counter.yadro.ru/hit?t39.1;r" +
+			escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+				";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+					screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+			";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+			"' alt='' title='LiveInternet' " +
+			"border='0' width='31' height='31' style=\"position:absolute;left:-10000px;top:-10000px;\" ><\/a>")
+	</script>
+	<!--/LiveInternet-->
 
 
 
