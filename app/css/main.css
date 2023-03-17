@@ -2508,6 +2508,7 @@ a[data-button~="colors2"]:hover:before {
   line-height: 130%;
   color: rgba(0, 0, 0, 0.5);
   max-width: 400px;
+  font-family: 'Inter';
 }
 
 @media (max-width: 1370px) {
