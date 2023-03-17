@@ -3221,19 +3221,14 @@ a[data-button~="colors2"]:hover:before {
 }
 
 .cont__info-mail {
-  background: linear-gradient(to right, #27C58B, #029E81);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #27C58B;
   display: block;
   margin-bottom: 10px;
 }
 
 .cont__info-mail:hover {
+  color: #03955F;
   text-decoration: underline;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
-  background: none;
-  color: #27C58B;
 }
 
 .cont__info-phone {
