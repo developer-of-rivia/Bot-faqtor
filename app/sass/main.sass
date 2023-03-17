@@ -910,10 +910,16 @@
     position: relative
     background: #fff
     border: 2px solid transparent
+    display: inline-block
     +sm
         max-width: 380px
     &:hover
         border-color: #27C58B
+        .cases__item-link
+            background: #27C58B
+            border-color: #27C58B
+            svg
+                fill: #fff
 .cases__item-theme
     padding-left: 12px
     span
@@ -936,11 +942,6 @@
     right: 25px
     top: 25px
     transition: 0.2s ease
-    &:hover
-        background: #27C58B
-        border-color: #27C58B
-        svg
-            fill: #fff
 .cases__buttons
     display: flex
     flex-direction: column

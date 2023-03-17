@@ -2624,6 +2624,7 @@ a[data-button~="colors2"]:hover:before {
   position: relative;
   background: #fff;
   border: 2px solid transparent;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
@@ -2634,6 +2635,15 @@ a[data-button~="colors2"]:hover:before {
 
 .cases__item:hover {
   border-color: #27C58B;
+}
+
+.cases__item:hover .cases__item-link {
+  background: #27C58B;
+  border-color: #27C58B;
+}
+
+.cases__item:hover .cases__item-link svg {
+  fill: #fff;
 }
 
 .cases__item-theme {
@@ -2666,15 +2676,6 @@ a[data-button~="colors2"]:hover:before {
   right: 25px;
   top: 25px;
   transition: 0.2s ease;
-}
-
-.cases__item-link:hover {
-  background: #27C58B;
-  border-color: #27C58B;
-}
-
-.cases__item-link:hover svg {
-  fill: #fff;
 }
 
 .cases__buttons {
