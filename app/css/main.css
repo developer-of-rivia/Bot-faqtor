@@ -2162,6 +2162,7 @@ a[data-button~="colors2"]:hover:before {
   font-size: 36px;
   line-height: 100%;
   max-width: 380px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 991px) {
@@ -2185,6 +2186,7 @@ a[data-button~="colors2"]:hover:before {
   margin-bottom: 62px;
   font-weight: 500;
   line-height: 130%;
+  font-family: 'Inter';
 }
 
 @media (max-width: 991px) {
@@ -2249,6 +2251,27 @@ a[data-button~="colors2"]:hover:before {
   .prot__content-button--step4 {
     font-size: 15px;
   }
+}
+
+.prot__content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.prot__content-list li {
+  display: flex;
+  gap: 6px;
+  text-align: left;
+}
+
+.prot__content-list p {
+  margin-bottom: 0;
+}
+
+.prot__conten-listnum {
+  font-weight: 700;
+  display: inline-block;
 }
 
 /* byelama-area */
