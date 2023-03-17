@@ -1247,6 +1247,14 @@ a[data-button~="colors2"]:hover:before {
   }
 }
 
+@media (max-width: 991px) {
+  .main__graphs1 {
+    max-width: 400px;
+    right: 310px;
+    top: 30px;
+  }
+}
+
 .main__graphs2 {
   position: absolute;
   right: 0;
@@ -1259,6 +1267,14 @@ a[data-button~="colors2"]:hover:before {
     right: -25px;
     max-width: 500px;
     bottom: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main__graphs2 {
+    right: 295px;
+    max-width: 390px;
+    bottom: 120px;
   }
 }
 
