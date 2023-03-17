@@ -2690,6 +2690,8 @@ a[data-button~="colors2"]:hover:before {
   display: flex;
   gap: 2px;
   margin-top: 10px;
+  color: #111;
+  font-family: 'Rubik';
 }
 
 @media (max-width: 574px) {
