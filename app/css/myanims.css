@@ -29,18 +29,18 @@
 /* moveFromBottom */
 .moveFromBottom { animation-name: moveFromBottom; animation-duration: 1s; }
 @keyframes moveFromBottom {
-    from { transform: translateY(200px); opacity: 0; }
+    from { transform: translateY(25px); opacity: 0; }
 }
 /* moveFromLeft */
 .moveFromLeft { animation-name: moveFromLeft; animation-duration: 1s; }
 @keyframes moveFromLeft {
-    from { transform: translateX(-200px); opacity: 0; }
+    from { transform: translateX(-25px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
 /* moveFromRight */
 .moveFromRight { animation-name: moveFromRight; animation-duration: 1s; }
 @keyframes moveFromRight {
-    from { transform: translateX(200px); opacity: 0; }
+    from { transform: translateX(25px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
 /* flip X */
@@ -76,6 +76,24 @@
 
 
 
+/* BlurIn */
+.blurIn { animation-name: blurIn; animation-duration: 2s;}
+@keyframes blurIn {
+    from {
+        filter: blur(50px);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* lefadein */
 .leFadeIn { animation-name: leFadeIn; animation-duration: 1s; }
@@ -88,14 +106,6 @@
 @keyframes blurInTop {
     from {
         transform: translateY(100%);
-        filter: blur(20px);
-        opacity: 0;
-    }
-}
-/* BlurIn */
-.blurIn { animation-name: blurIn; animation-duration: 1s;}
-@keyframes blurIn {
-    from {
         filter: blur(20px);
         opacity: 0;
     }
