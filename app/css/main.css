@@ -405,6 +405,10 @@ a[data-button~="colors2"]:hover:before {
   text-decoration: none;
 }
 
+.accordion__content span {
+  font-weight: 700;
+}
+
 .accordion__control {
   display: flex;
   align-items: center;
@@ -595,10 +599,6 @@ a[data-button~="colors2"]:hover:before {
 
 .custom-select__item:hover {
   color: #27C58B;
-}
-
-.custom-select__item:focus {
-  background-color: #aaa;
 }
 
 .custom-select--show {
