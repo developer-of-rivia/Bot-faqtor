@@ -1,96 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(function () {
 	
-    
-    // dropdown
-    let dropdowns = document.querySelectorAll('.nav__dropdown');
-	dropdowns.forEach(dropdown => {
-        document.addEventListener('click', (e) => {
-            if(!e.composedPath().includes(dropdown)){
-                dropdown.classList.remove('nav__dropdown--open');
-            }
-        });
-
-		dropdown.addEventListener('click', function(){
-			dropdown.classList.toggle('nav__dropdown--open');
-		});
-	});
-
-
-	// menu
-	let burgerIcon = document.querySelector('.header__toggle-burger');
-    let closeIcon = document.querySelector('.header__toggle-close');
-    let menu = document.querySelector('.header__panel');
-    let scrollObject = document.querySelector('.header__panel');
-
-	burgerIcon.addEventListener('click', function(){
-		closeIcon.classList.remove('hidden');
-		burgerIcon.classList.add('hidden');
-        menu.classList.add('header__panel--open');
-        scrollLock.disablePageScroll(scrollObject);
-    })
-    closeIcon.addEventListener('click', function(){
-		closeIcon.classList.add('hidden');
-		burgerIcon.classList.remove('hidden');
-        menu.classList.remove('header__panel--open');
-        scrollLock.enablePageScroll(scrollObject);
-    })
-
-	// fixed header
-	window.onscroll = function showHeader() {
-        var header = document.querySelector('.header');
-        if(window.pageYOffset > 100){
-            header.classList.add('header_fixed');
-        } else{
-            header.classList.remove('header_fixed');
-        }
-    }
-
-
-
-	// tabs
-	let tab = document.querySelectorAll('.tabs__head'),
-	tabContent = document.querySelectorAll('.tabs__item');
-		tab.forEach(function(tab, i) {
-		tab.addEventListener('click', function() {
-			hideTab();
-			this.classList.add('tabs__item--show');
-			tabContent[i].classList.add('tabs__item--show');
-		});
-	});
-
-	function hideTab() {
-		tab.forEach((item) => {
-			item.classList.remove('tabs__item--show');
-		});
-		tabContent.forEach((item) => {
-			item.classList.remove('tabs__item--show');
-		});
-	}
-
-
-	// accordion
-	const accordions = document.querySelectorAll('.accordion');
-    accordions.forEach(el => {
-        el.addEventListener('click', (e) => {
-            const self = e.currentTarget;
-            const control = self.querySelector('.accordion__control');
-            const content = self.querySelector('.accordion__content');
-
-            self.classList.toggle('open');
-
-            // если открыт аккордеон
-            if (self.classList.contains('open')) {
-                control.setAttribute('aria-expanded', true);
-                content.setAttribute('aria-hidden', false);
-                content.style.maxHeight = content.scrollHeight + 'px';
-            } else {
-                control.setAttribute('aria-expanded', false);
-                content.setAttribute('aria-hidden', true);
-                content.style.maxHeight = null;
-            }
-        });
-    });
-
 
 
     // custom select
@@ -188,4 +97,279 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
+    // калькулятор
+    $(".calculator__group input").keyup(function () {
+        $(this).val(thousandSeparator($(this).val().replace(/[^0-9]/g, "")));
+        var yandex = $("[name='yandex']").val().replace(/\s/g, '');
+        var google = $("[name='google']").val().replace(/\s/g, '');
+        var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
+        var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+        //var theme = $(".theme option").prop('selected', true).change().attr('data');
+        var theme = "";
+
+        $( ".calculator__group select option:selected" ).each(function() {
+            theme += $( this ).attr('data') + " ";
+        });
+
+        if(priceyandex == ''){
+            if(theme == undefined){
+                resultyandex = (yandex / 100 * theme)*50;
+            }else{
+                resultyandex = (yandex / 100 * 25)*50;
+            }
+        }else{
+            if(theme == undefined){
+                resultyandex = (yandex / 100 * theme)*priceyandex;
+            }else{
+                resultyandex = (yandex / 100 * 25)*priceyandex;
+            }
+        }
+
+        if(pricegoogle == ''){
+            if(theme == undefined){
+                resultgoogle = (google / 100 * theme)*50;
+            }else{
+                resultgoogle = (google / 100 * 25)*50;
+            }
+        }else{
+            if(theme == undefined){
+                resultgoogle = (google / 100 * theme)*pricegoogle;
+            }else{
+                resultgoogle = (google / 100 * 25)*pricegoogle;
+            }
+        }
+
+
+        resultSUM = resultyandex+resultgoogle;
+        var sumyear = resultSUM*12
+
+        if(sumyear || resultSUM){
+            $('.year span').text(thousandSeparator(Math.ceil(sumyear)));
+            $('.month span').text(thousandSeparator(Math.ceil(resultSUM)));
+        }else{
+            $('.year span').text('0');
+            $('.month span').text('0');
+        }
+
+    });
+
+    $(".calculator__group select").change(function(){
+        var yandex = $("[name='yandex']").val().replace(/\s/g, '');
+        var google = $("[name='google']").val().replace(/\s/g, '');
+
+        var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
+        var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+
+        var theme = "";
+        $( ".calculator__group select option:selected" ).each(function() {
+            theme += $( this ).attr('data') + " ";
+        });
+
+
+        if(priceyandex == ''){
+            resultyandex = (yandex / 100 * theme)*50;
+        }else{
+            resultyandex = (yandex / 100 * theme)*priceyandex;
+        }
+
+        if(pricegoogle == ''){
+            resultgoogle = (google / 100 * theme)*50;
+        }else{
+            resultgoogle = (google / 100 * theme)*pricegoogle  
+        }
+
+        resultSUM = resultyandex+resultgoogle;
+        var sumyear = resultSUM*12
+
+
+        if(sumyear || resultSUM){
+            $('.year span').text(thousandSeparator(Math.ceil(sumyear)));
+            $('.month span').text(thousandSeparator(Math.ceil(resultSUM)));
+        }else{
+            $('.year span').text('0');
+            $('.month span').text('0');
+        }
+
+    });
+
+    var thousandSeparator = function (str) {
+    var parts = (str + '').split('.'),
+        main = parts[0],
+        len = main.length,
+        output = '',
+        i = len - 1;
+
+    while (i >= 0) {
+        output = main.charAt(i) + output;
+        if ((len - i) % 3 === 0 && i > 0) {
+            output = ' ' + output;
+        }
+        --i;
+    }
+
+    if (parts.length > 1) {
+        output += '.' + parts[1];
+    }
+    return output;
+    };
+
+
+    $('.custom-select__item[data-value="Реклама"]').on('click', function(){
+        $('.calopt1').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Услуги"]').on('click', function(){
+        $('.calopt2').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Ecommerce / online retail"]').on('click', function(){
+        $('.calopt3').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Образование"]').on('click', function(){
+        $('.calopt4').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Финансы"]').on('click', function(){
+        $('.calopt5').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Юриспруденция"]').on('click', function(){
+        $('.calopt6').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Медицина"]').on('click', function(){
+        $('.calopt7').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Онлайн сервисы"]').on('click', function(){
+        $('.calopt8').prop('selected',true);
+    })
+
+
+    $('.custom-select__item').on('click', function(){
+        var yandex = $("[name='yandex']").val().replace(/\s/g, '');
+        var google = $("[name='google']").val().replace(/\s/g, '');
+
+        var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
+        var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+
+        var theme = "";
+        $( ".calculator__group select option:selected" ).each(function() {
+            theme += $( this ).attr('data') + " ";
+        });
+
+
+        if(priceyandex == ''){
+            resultyandex = (yandex / 100 * theme)*50;
+        }else{
+            resultyandex = (yandex / 100 * theme)*priceyandex;
+        }
+
+        if(pricegoogle == ''){
+            resultgoogle = (google / 100 * theme)*50;
+        }else{
+            resultgoogle = (google / 100 * theme)*pricegoogle  
+        }
+
+        resultSUM = resultyandex+resultgoogle;
+        var sumyear = resultSUM*12
+
+
+        if(sumyear || resultSUM){
+            $('.year span').text(thousandSeparator(Math.ceil(sumyear)));
+            $('.month span').text(thousandSeparator(Math.ceil(resultSUM)));
+        }else{
+            $('.year span').text('0');
+            $('.month span').text('0');
+        }
+    })
+
+
+
+
+
+    // dropdown
+    let dropdowns = document.querySelectorAll('.nav__dropdown');
+	dropdowns.forEach(dropdown => {
+        document.addEventListener('click', (e) => {
+            if(!e.composedPath().includes(dropdown)){
+                dropdown.classList.remove('nav__dropdown--open');
+            }
+        });
+
+		dropdown.addEventListener('click', function(){
+			dropdown.classList.toggle('nav__dropdown--open');
+		});
+	});
+
+
+	// menu
+	let burgerIcon = document.querySelector('.header__toggle-burger');
+    let closeIcon = document.querySelector('.header__toggle-close');
+    let menu = document.querySelector('.header__panel');
+    let scrollObject = document.querySelector('.header__panel');
+
+	burgerIcon.addEventListener('click', function(){
+		closeIcon.classList.remove('hidden');
+		burgerIcon.classList.add('hidden');
+        menu.classList.add('header__panel--open');
+        scrollLock.disablePageScroll(scrollObject);
+    })
+    closeIcon.addEventListener('click', function(){
+		closeIcon.classList.add('hidden');
+		burgerIcon.classList.remove('hidden');
+        menu.classList.remove('header__panel--open');
+        scrollLock.enablePageScroll(scrollObject);
+    })
+
+	// fixed header
+	window.onscroll = function showHeader() {
+        var header = document.querySelector('.header');
+        if(window.pageYOffset > 100){
+            header.classList.add('header_fixed');
+        } else{
+            header.classList.remove('header_fixed');
+        }
+    }
+
+
+
+	// tabs
+	let tab = document.querySelectorAll('.tabs__head'),
+	tabContent = document.querySelectorAll('.tabs__item');
+		tab.forEach(function(tab, i) {
+		tab.addEventListener('click', function() {
+			hideTab();
+			this.classList.add('tabs__item--show');
+			tabContent[i].classList.add('tabs__item--show');
+		});
+	});
+
+	function hideTab() {
+		tab.forEach((item) => {
+			item.classList.remove('tabs__item--show');
+		});
+		tabContent.forEach((item) => {
+			item.classList.remove('tabs__item--show');
+		});
+	}
+
+
+	// accordion
+	const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(el => {
+        el.addEventListener('click', (e) => {
+            const self = e.currentTarget;
+            const control = self.querySelector('.accordion__control');
+            const content = self.querySelector('.accordion__content');
+
+            self.classList.toggle('open');
+
+            // если открыт аккордеон
+            if (self.classList.contains('open')) {
+                control.setAttribute('aria-expanded', true);
+                content.setAttribute('aria-hidden', false);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                control.setAttribute('aria-expanded', false);
+                content.setAttribute('aria-hidden', true);
+                content.style.maxHeight = null;
+            }
+        });
+    });
 });
