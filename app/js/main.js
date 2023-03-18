@@ -215,8 +215,21 @@ $(function () {
     };
 
 
+    
+    $('.custom-select__item').on('click', function(){
+        if($(this).data('value') == 'Выберите тематику сайта'){
+            $('.custom-select__current').removeClass('custom-select__current--notdef');
+        } else {
+            $('.custom-select__current').addClass('custom-select__current--notdef');
+        }
+    });
+
+    $('.custom-select__item[data-value="Выберите тематику сайта"]').on('click', function(){
+        $('.calopt0').prop('selected',true);
+    });
     $('.custom-select__item[data-value="Реклама"]').on('click', function(){
         $('.calopt1').prop('selected',true);
+
     });
     $('.custom-select__item[data-value="Услуги"]').on('click', function(){
         $('.calopt2').prop('selected',true);
@@ -239,6 +252,28 @@ $(function () {
     $('.custom-select__item[data-value="Онлайн сервисы"]').on('click', function(){
         $('.calopt8').prop('selected',true);
     })
+    $('.custom-select__item[data-value="Медицина"]').on('click', function(){
+        $('.calopt7').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Онлайн сервисы"]').on('click', function(){
+        $('.calopt8').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Программное обеспечение / IT"]').on('click', function(){
+        $('.calopt9').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Телеком"]').on('click', function(){
+        $('.calopt10').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Туризм"]').on('click', function(){
+        $('.calopt11').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Недвижимость"]').on('click', function(){
+        $('.calopt12').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Авто"]').on('click', function(){
+        $('.calopt13').prop('selected',true);
+    });
+    
 
 
     $('.custom-select__item').on('click', function(){
