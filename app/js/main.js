@@ -1,11 +1,4 @@
 $(function () {
-	
-
-
-    // custom select
-    // custom select
-    // custom select
-
     /* Custom Select */
     //Получаем все "select" по селектору
     const selects = document.querySelectorAll('.select__item')
@@ -275,7 +268,6 @@ $(function () {
     });
     
 
-
     $('.custom-select__item').on('click', function(){
         var yandex = $("[name='yandex']").val().replace(/\s/g, '');
         var google = $("[name='google']").val().replace(/\s/g, '');
@@ -313,6 +305,8 @@ $(function () {
             $('.month span').text('0');
         }
     })
+
+
 
 
 
@@ -407,4 +401,5 @@ $(function () {
             }
         });
     });
+
 });
