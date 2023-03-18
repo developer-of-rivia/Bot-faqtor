@@ -2280,12 +2280,25 @@ a[data-button~="colors2"]:hover:before {
   }
 }
 
+.prot__content-text span {
+  font-weight: 600;
+  color: #333;
+}
+
 .prot__content-text h3 {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 20px;
   line-height: 130%;
   color: #111;
+}
+
+.prot__content-text .prot5--mark {
+  color: #27C58B;
+}
+
+.prot__content-text ul li {
+  margin-top: 10px;
 }
 
 .prot__content-button-area {
