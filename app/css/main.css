@@ -2645,6 +2645,11 @@ a[data-button~="colors2"]:hover:before {
   justify-content: space-between;
 }
 
+.calculator__lost-item div span {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .calculator__lost {
   width: 100%;
   border-radius: 10px;
