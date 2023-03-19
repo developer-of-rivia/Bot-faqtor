@@ -3085,11 +3085,13 @@ a[data-button~="colors2"]:hover:before {
 /* cont */
 .cont {
   height: 500px;
+  background: #f7f9fd;
 }
 
 @media (max-width: 991px) {
   .cont {
     height: auto;
+    background: #fff;
   }
 }
 
@@ -3125,7 +3127,6 @@ a[data-button~="colors2"]:hover:before {
   position: relative;
   justify-content: space-between;
   height: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 991px) {
