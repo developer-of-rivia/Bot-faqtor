@@ -4,40 +4,1436 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Название сайта</title>
+	<title>Защита от скликивания в Яндек Директ - BotFAQtor.ru</title>
+    <meta name="description"
+        content="Защита от скликивания (кликфрода) вашей контекстной рекламы в Яндекс Директ конкурентами и вебмастерами.">
+    <link rel="icon" type="image/x-icon" href="https://botfaqtor.ru/favicon.ico">
+    <meta property="og:url" content="https://botfaqtor.ru/yandex-clickfraud" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Защита от скликивания в Яндекс Директ - BotFAQtor.ru" />
+    <meta property="og:description"
+        content="Защита от скликивания (кликфрода) вашей контекстной рекламы в Яндекс Директ конкурентами и вебмастерами." />
+    <meta property="og:image" content="https://botfaqtor.ru/yandex-clickfraud/img/og_imageNet.gif" />
 	<link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
-	<!-- Styles -->
-	<link rel="stylesheet" href="css/normalize.css">
 	<!-- build:css -->
 	<!-- Все стили помещаются внтурь комментария build -->
-	<!-- Slick slider CSS -->
-	<link rel="stylesheet" href="libs/slick-slider/slick.css">
-	<!-- Magnific Popup CSS -->
-	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
-	<!-- Google Fonts roboto -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900|Rubik:500,700,900&subset=latin,cyrillic" rel="stylesheet">
 	<!-- Базовые стили CSS -->
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/myanims.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="libs/roll-network/roll-network.css">
 	<!-- endbuild -->
+	<!-- Внешние скрипты -->
+
+
+
+
+	<!-- jQuery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Внешнийе скрипты -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160917634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160917634-1', {
+            'custom_map': {
+                'dimension1': 'Botfaqtor'
+            }
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://botfaqtor.ru",
+            "logo": "https://botfaqtor.ru/assets/remaster/images/landing/brand.svg"
+        }
+    </script>
+	<!-- Begin Verbox {literal} -->
+    <script type='text/javascript'>
+        (function (d, w, m) {
+            window.supportAPIMethod = m;
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.id = 'supportScript';
+            s.charset = 'utf-8';
+            s.async = true;
+            var id = 'fa8d6ba2fa033b89a545e3d9db332dae';
+            s.src = 'https://admin.verbox.ru/support/support.js?h=' + id;
+            var sc = d.getElementsByTagName('script')[0];
+            w[m] = w[m] || function () {
+                (w[m].q = w[m].q || []).push(arguments);
+            };
+            if (sc) sc.parentNode.insertBefore(s, sc);
+            else d.documentElement.firstChild.appendChild(s);
+        })(document, window, 'Verbox');
+    </script>
+    <!-- {/literal} End Verbox -->
 </head>
 
-
 <body>
+	<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(86566686, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script> <noscript>
+        <div><img src="https://mc.yandex.ru/watch/86566686" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> <!-- /Yandex.Metrika counter -->
+	<!-- header -->
+	<header class="header">
+		<div class="header__container">
+			<a href="#" class="header__logo">
+				<img src="img/dist/logo.svg">
+			</a>
+			<div class="header__panel">
+				<nav class="header__menu">
+					<ul class="nav">
+						<li class="nav__item nav__dropdown">
+							<a class="nav__link">
+								<span class="nav__link-text--desktop">Все сервисы защиты от ботов</span>
+								<span class="nav__link-text--tablet">Сервисы</span>
+								<svg>
+									<use xlink:href="img/svg-ui-sprite.svg#ungle-down"></use>
+								</svg>
+							</a>
+							<ul class="nav__dropdown-box">
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru./yandex-clickfraud/" class="nav__dropdown-link">
+										<img src="img/dist/nav-yandex-protect.svg">
+										<span class="nav__dropdown-link-text">Защита от скликивания Яндекс Директ</span>
+									</a>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru./google-clickfraud/" class="nav__dropdown-link">
+										<img src="img/dist/nav-google-protect.svg">
+										<span class="nav__dropdown-link-text">Защита от скликивания Google Ads</span>
+									</a>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru./sites-antibot/" class="nav__dropdown-link">
+										<img src="img/dist/nav-site-protect.svg">
+										<span class="nav__dropdown-link-text">Антибот для сайта</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru./yandex-clickfraud/#price" class="nav__link">
+								<span>Цена</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru/blog/" class="nav__link">
+								<span>Блог</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru/blog/cases/" class="nav__link">
+								<span>Кейсы</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru/affiliate-program/" class="nav__link">
+								<span>Партнерская программа</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__info">
+					<a href="mailto:info@botfaqtor.ru" class="header__info-mail">
+						info@botfaqtor.ru
+					</a>
+					<a href="tel:74959466031" class="header__info-phone">
+						+7 (495) 946-6031
+					</a>
+				</div>
+				<div class="header__right">
+					<div class="header__right-cell">
+						<a href="https://botfaqtor.ru/signin" data-button="struct2 colors2 size5" class="header__account">
+							Личный кабинет
+						</a>
+					</div>
+					<div class="header__right-cell">
+						<a href="#" data-button="struct1 bradius1 size1 colors1 shadows1" class="header__connect">
+							Подключить
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__toggle">
+				<div class="header__toggle-burger">
+					<svg>
+						<use xlink:href="img/svg-ui-sprite.svg#burger-icon"></use>
+					</svg>
+				</div>
+				<div class="header__toggle-close hidden">
+					<svg>
+						<use xlink:href="img/svg-ui-sprite.svg#close-icon"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- main -->
+	<section class="main">
+		<div class="container main__container">
+			<div class="main__wrapper">
+				<div class="main__left">
+					<div class="main__incom">
+						<div class="main__incom-title">
+							Совместный проект
+						</div>
+						<div class="main__incom-box">
+							<div class="main__incom-item main__incom-first">
+								<img src="img/dist/logo.svg">
+							</div>
+							<div class="main__incom-item">
+								<img src="img/dist/elama-logo.svg">
+							</div>
+						</div>
+					</div>
+					<div class="main__content">
+						<h1 class="main__title">
+							Как защищаться от скликивания в Яндекс Директ бесплатно?
+						</h1>
+						<p class="main__text">
+							Весь функционал BotFAQtor бесплатно для клиентов eLama, с рекламным бюджетом от 20 000 ₽/мес.
+						</p>
+						<a href="#" data-button="struct1 size2 colors1 bradius1 shadows1 size2" class="main__button">
+							Подключить
+						</a>
+					</div>
+				</div>
+				<div class="main__right">
+					<div class="main__graphs">
+						<img src="img/dist/main-graphs-window1.webp" class="main__graphs1 wow GmoveFromTop">
+						<img src="img/dist/main-graphs-window2.webp" class="main__graphs2 wow GmoveFromBottom">
+					</div>
+					<div class="main__shadow">
+						<img src="img/dist/main-shadow.webp" class="main__shadow-img">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- advs -->
+	<div class="advs">
+		<div class="container">
+			<div class="adv__wrapper">
+				<div class="adv__item">
+					<div class="adv__item-icon">
+						<img src="img/dist/adv-img1.svg">
+					</div>
+					<div class="adv__item-text">
+						Защита <br>24/7
+					</div>
+				</div>
+				<div class="adv__item">
+					<div class="adv__item-icon">
+						<img src="img/dist/adv-img2.svg">
+					</div>
+					<div class="adv__item-text">
+						Автоматизация <br>через API Яндекса
+					</div>
+				</div>
+				<div class="adv__item">
+					<div class="adv__item-icon">
+						<img src="img/dist/adv-img3.svg">
+					</div>
+					<div class="adv__item-text">
+						Подключение <br>за 5 минут
+					</div>
+				</div>
+				<div class="adv__item adv__item--last">
+					<div class="adv__item-icon">
+						<img src="img/dist/adv-img4.svg">
+					</div>
+					<div class="adv__item-text">
+						Подписываем <br>NDA
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- trust -->
+	<div class="trust">
+		<div class="container">
+			<h2 class="trust__title title title--mb1">
+				Нам доверяют
+			</h2>
+			<h3 class="trust__subtitle subtitle">
+				Компании с которыми мы сотрудничаем
+			</h3>
+			<div class="trust__box">
+				<div class="trust__item">
+					<img src="img/dist/trust-img1.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img2.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img3.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img4.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img5.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img6.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img7.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img8.svg">
+				</div>
+				<div class="trust__item">
+					<img src="img/dist/trust-img9.svg">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- cause -->
+	<div class="cause">
+		<div class="container">
+			<h2 class="cause__title title title--mb1">
+				Чем мы занимаемся?
+			</h2>
+			<h3 class="cause__subtitle subtitle">
+				С 2017 года Botfaqtor успешно борется с фродом во всех его проявлениях
+			</h3>
+			<div class="cause__box">
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--firsts">
+						<img src="img/dist/cause-img1.svg">
+					</div>
+					<p class="cause__item-text">
+						Ловим ботов по более чем 100 техническим и поведенческим параметрам
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--firsts">
+						<img src="img/dist/cause-img2.svg">
+					</div>
+					<p class="cause__item-text">
+						Отключаем показ контекстной рекламы для ~ 30 млн. ботов в Яндекс Директ
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--firsts">
+						<img src="img/dist/cause-img3.svg">
+					</div>
+					<p class="cause__item-text">
+						Отключаем показ рекламы для скликивателей с буксов и бирж <span>(более 500 тыс.)</span>
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--seconds">
+						<img src="img/dist/cause-img4.svg">
+					</div>
+					<p class="cause__item-text">
+						Снижаем стоимость цели и повышаем конверсию в Яндекс Директ
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--seconds">
+						<img src="img/dist/cause-img5.svg">
+					</div>
+					<p class="cause__item-text">
+						Повышаем конверсию рекламных кампаний
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--seconds">
+						<img src="img/dist/cause-img6.svg">
+					</div>
+					<p class="cause__item-text">
+						Увеличиваем количество продаж при фиксированном бюджете
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--thirds">
+						<img src="img/dist/cause-img7.svg">
+					</div>
+					<p class="cause__item-text">
+						Следим за обновлениями приватного и платного софта для создания ботов
+					</p>
+				</div>
+				<div class="cause__item">
+					<div class="cause__item-img cause__item-img--thirds">
+						<img src="img/dist/cause-img8.svg">
+					</div>
+					<p class="cause__item-text">
+						Знаем ботоводов и делаем тестовые закупки их ботов для улучшения наших алгоритмов
+					</p>
+				</div>
+				<div class="cause__item cause__item--button">
+					<a target="_blank" href="https://botfaqtor.ru/signin?service=yandex-clickfraud" class="cause__button" data-button="struct1 colors3 gap1 shadows2 size8">
+						<span>Как работает сервис?</span>
+						<svg>
+							<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="cause__button-place">
+				<a href="#" data-button="struct1 size2 colors1 bradius1" class="cause__button">
+					Подключить
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- <span data-vanilla-counter data-start-at="299937500" data-end-at="299938560" data-delay="1" data-format="{}%">${}</span> -->
+    <!-- <span data-vanilla-counter data-start-at="250" data-end-at="2" data-time="1000">${}</span> -->
+
+	<!-- numbers -->
+	<div class="numbers">
+		<div class="container">
+			<div class="numbers__box">
+				<div class="numbers__item wow">
+					<div class="numbers__item-count">
+						299 938 560
+					</div>
+					<div class="numbers__item-text">
+						Пользователей <br>проверили
+					</div>
+				</div>
+				<div class="numbers__item">
+					<div class="numbers__item-count">
+						17 956 000
+					</div>
+					<div class="numbers__item-text">
+						Общая база ботов <br>в Яндекс директ
+					</div>
+				</div>
+				<div class="numbers__item">
+					<div class="numbers__item-count">
+						5 326
+					</div>
+					<div class="numbers__item-text">
+						Сайтов под <br>нашей защитой
+					</div>
+				</div>
+				<div class="numbers__item">
+					<div class="numbers__item-count">
+						23 326
+					</div>
+					<div class="numbers__item-text">
+						Рекламных кампаний <br>под защитой
+					</div>
+				</div>
+				<div class="numbers__updates">
+					последнее обновление: сегодня, 22:46
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- clicks -->
+	<section class="clicks">
+		<div class="container">
+			<div class="clicks__wrapper">
+				<h2 class="clicks__title title">
+					Как скликивают вашу рекламу?
+				</h2>
+				<div class="clicks__box">
+					<a href="https://botfaqtor.ru/blog/v-moej-tematike-net-klikfroda/" target="_blank" class="clicks__item">
+						<div class="clicks__item-link">
+							<svg>
+								<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+							</svg>
+						</div>
+						<div class="clicks__item-icon">
+							<img src="img/dist/clicks-icon1.svg">
+						</div>
+						<div class="clicks__item-name">
+							На поиске
+						</div>
+						<p class="clicks__item-text">
+							Конкуренты скликивают вашу рекламу, чтобы очистить место для своих товаров и услуг.
+						</p>
+					</a>
+					<a href="https://botfaqtor.ru/blog/click-fraud-malware/" target="_blank" class="clicks__item">
+						<div class="clicks__item-link">
+							<svg>
+								<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+							</svg>
+						</div>
+						<div class="clicks__item-icon">
+							<img src="img/dist/clicks-icon2.svg">
+						</div>
+						<div class="clicks__item-name">
+							На площадках <br>в сети
+						</div>
+						<p class="clicks__item-text">
+							Скликивание мошенниками для личной выгоды той площадки, на которой размещена реклама.
+						</p>
+					</a>
+					<a href="https://botfaqtor.ru/blog/kak-klik-boty-imitiruyut-realnyh-polzovateley/" target="_blank" class="clicks__item">
+						<div class="clicks__item-link">
+							<svg>
+								<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+							</svg>
+						</div>
+						<div class="clicks__item-icon">
+							<img src="img/dist/clicks-icon3.svg">
+						</div>
+						<div class="clicks__item-name">
+							Нагугливание профиля бота
+						</div>
+						<p class="clicks__item-text">
+							Бот вводит запросы, ходит по сайту, имитирует поведение, в том числе кликает на контекстную рекламу.
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- prot -->
+	<section class="prot">
+		<div class="container">
+			<h2 class="prot__title title title title--mb1">
+				Как защититься от скликивания в Яндекс Директ <span>бесплатно</span>?
+			</h2>
+			<div class="prot__subtitle subtitle">
+				Всего пять шагов — и ваш сайт защищен от скликивания и фрода
+			</div>
+			<div class="prot__tabs tabs">
+				<div class="prot__tabs-header tabs__header">
+					<div class="prot__tabs-head tabs__head tabs__item--show">1 шаг</div>
+					<div class="prot__tabs-head tabs__head">2 шаг</div>
+					<div class="prot__tabs-head tabs__head">3 шаг</div>
+					<div class="prot__tabs-head tabs__head">4 шаг</div>
+					<div class="prot__tabs-head tabs__head">5 шаг</div>
+				</div>
+				<div class="tabs__content">
+					<div class="tabs__item prot__item--1 tabs__item--show">
+						<div class="prot__content">
+							<div class="prot__left">
+								<h2 class="prot__content-title title title--mb1">
+									Зарегистрируйтесь в eLama
+								</h2>
+								<div class="prot__content-text">
+									<p>или <a target="_blank" href="https://botfaqtor.ru/register?service=yandex-clickfraud">авторизуйтесь в eLama</a>, если вы являетесь <br>зарегистрированным пользователем. Затем <br>перейдите в раздел “Маркетплейс инструментов” <br>и бесплатно подключите сервис BotFAQtor.</p>
+								</div>
+								<div class="prot__content-button-area">
+									<a href="#" class="prot__content-button" data-button="struct1 size3 colors1 bradius1 shadows1">
+										Регистрация
+									</a>
+								</div>
+							</div>
+							<div class="prot__right">
+								<img data-src="img/dist/prot-img1.webp" class="lazyload">
+							</div>
+						</div>
+					</div>
+					<div class="tabs__item prot__item--2">
+						<div class="prot__content">
+							<div class="prot__left">
+								<h2 class="prot__content-title title title--mb1">
+									Установка счетчика на ваш сайт
+								</h2>
+								<div class="prot__content-text">
+									Для регистрации и анализа трафика необходимо установить код защиты на ваш сайт. Он представляет собой js-скрипт и устанавливается аналогично коду Яндекс Метрики, абсолютно безопасен и не нагружает страницы вашего ресурса.
+								</div>
+								<div class="prot__content-button-area">
+									<a href="#" class="prot__content-button prot__content-button--step4" data-button="struct2 size5 colors2">
+										Как добавить сайт и установить код счетчика?
+									</a>
+								</div>
+							</div>
+							<div class="prot__right">
+								<img data-src="img/dist/prot-img2.webp" class="lazyload">
+							</div>
+						</div>
+					</div>
+					<div class="tabs__item prot__item--3">
+						<div class="prot__content">
+							<div class="prot__left">
+								<h2 class="prot__content-title title title--mb1">
+									Подключение Яндекс Метрики и Директа
+								</h2>
+								<div class="prot__content-text">
+									<p>Наша цель отключать показы ваших рекламных объявлений ботам, кликерам, экономя вам рекламный бюджет. Для автоматизации процессов системе Botfaqtor необходимо получить доступ к API Яндекс Метрика & Яндекс Директ, чтобы можно было слету управлять корректировками ставок защищаемых рекламных кампаний (отключение показа сегменту с ботами). Мы постарались максимально упростить процесс настройки и все вынесли в личный кабинет.</p>
+									<ul class="prot__content-list">
+										<li><span class="prot__conten-listnum">1.</span> <p><a target="_blank" href="https://botfaqtor.ru/register?service=yandex-clickfraud">Зарегистрируйтесь</a> в Botfaqtor и добавьте сайт для защиты.</p></li>
+										<li><span class="prot__conten-listnum">2.</span> <p>Авторизуйтесь в Я.Метрике и Яндекс Директе.</p></li>
+										<li><span class="prot__conten-listnum">3.</span> <p>В личном кабинете нажмите кнопки “Разрешить доступ к Я.Метрике” + “Разрешить доступ к Яндекс Директу” + выберите кампании из Яндекс Директа, которые хотите защитить. Можно подключить неограниченное кол-во аккаунтов в Яндекс Директ.</p></li>
+									</ul>
+								</div>
+							</div>
+							<div class="prot__right">
+								<img data-src="img/dist/prot-img3.webp" class="lazyload">
+							</div>
+						</div>
+					</div>
+					<div class="tabs__item prot__item--4">
+						<div class="prot__content">
+							<div class="prot__left">
+								<h2 class="prot__content-title prot__content-title--2 title title--mb1">
+									Анализ визитов, блокировка показов
+								</h2>
+								<div class="prot__content-text">
+									<p>После установки кода защиты на ваш сайт, мы в реальном времени получаем данные о визитах и анализируем их на предмет ботности. За дело берутся десятки алгоритмов и сотни параметров, которые позволяют с уверенностью определить нежелательных ботов. Каждому из них присваивается уникальный цифровой отпечаток, по которому в дальнейшем они различаются.</p>
+									<h3>Как блокируем кликеров?</h3>
+									<p>В реальном времени мы <span>отправляем в сегмент Метрики специальный параметр</span>, который маркирует ботов (по ClientID), а так же на его основе обновляется корректировка ставок вашей рекламной кампании. А именно, для этого <span>сегмента</span> устанавливается <span>корректировка ставок</span> “-100%“, то есть рекламные объявления не будут показываться нежелательным визитам.</p>
+									<p>Также у нас есть <span>Общий сегмент в Директ</span>, в который автоматически попадают все боты + подозрительные обнаруженные на сайтах наших клиентов + скликиватели с бирж. <span>Общий сегмент насчитывает >30 млн ботов и скликивателей</span>.</p>
+									<p>Поисковые роботы в сегмент не добавляются. Сайт не нагружается лишними данными, система оптимизирована специально для ваших задач.</p>
+								</div>
+								<div class="prot__content-button-area">
+									<a href="#" class="prot__content-button" data-button="struct2 size5 colors2">
+										Подробнее читайте здесь
+									</a>
+								</div>
+							</div>
+							<div class="prot__right">
+								<img data-src="img/dist/prot-img4.webp" class="lazyload">
+							</div>
+						</div>
+					</div>
+					<div class="tabs__item prot__item--5">
+						<div class="prot__content">
+							<div class="prot__left">
+								<h2 class="prot__content-title title title--mb1">
+									Формирование отчетов владельцам
+								</h2>
+								<div class="prot__content-text">
+									<p>Все действия, которые осуществляет наша система по защите от кликфрода фиксируются и отображаются в виде отчетов в личном кабинете.</p>
+									<p>
+										<ul>
+											Весь трафик мы разделяем на четыре типа:
+											<li><span class="prot5--mark">боты</span> – автоматическое програмное обеспечение, имитирующее поведение пользователя. <br></li>
+											<li><span class="prot5--mark">подозрительные</span> – обнаружены подозрительные действия или подмена некоторых технических параметров. <br></li>
+											<li><span class="prot5--mark">нецелевые</span> – пользователь провел на сайте менее десяти секунд и не произвел никаких целевых действий. <br></li>
+											<li><span class="prot5--mark">целевые</span> – заинтересованный пользователь.</li>
+										</ul>
+									</p>
+									<p>
+										Вы сможете посмотреть отчеты по ключевым словам, utm-меткам, гео.
+									</p>
+								</div>
+								<div class="prot__content-button-area">
+									<a target="_blank" href="https://botfaqtor.ru/register?service=yandex-clickfraud" class="prot__content-button" data-button="struct1 size3 colors1 bradius1 shadows1">
+										Регистрация
+									</a>
+									<a href="#" class="prot__content-button" data-button="struct2 size6 colors2">
+										Подробнее про отчеты
+									</a>
+								</div>
+							</div>
+							<div class="prot__right">
+								<img data-src="img/dist/prot-img5.webp" class="lazyload">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- byelama -->
+	<div class="byelama-area">
+		<div class="container">
+			<div class="byelama">
+				<div class="byelama__top">
+					<div class="byelama__title">
+						Что такое eLama?
+					</div>
+					<div class="byelama__logo">
+						<img src="img/dist/elama-logo.svg">
+					</div>
+				</div>
+				<div class="byelama__content">
+					<div class="byelama__text">
+						<p>eLama — платформа для эффективного управления интернет-рекламой. </p>
+						<p>Оплачивайте рекламу во всех основных рекламных системах, получайте единый комплект закрывающих документов, быстро и удобно маркируйте рекламу.  </p>
+						<p>А еще получите бесплатный доступ к BotFAQtor и другим инструментам для работы с рекламой в первом бесплатном маркетплейсе от eLama.</p>
+					</div>
+					<div class="byelama__buttons">
+						<a target="_blank" href="https://botfaqtor.ru/register?service=yandex-clickfraud" class="byelama__register" data-button="struct1 size3 bradius1 shadows1 colors1">
+							Регистрация
+						</a>
+						<a target="_blank" href="https://elama.ru/" class="byelama__more" data-button="struct2 size6 colors2">
+							Подробнее
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- calc -->
+	<div class="calc">
+		<div class="container2">
+			<div class="calc__wrapper">
+				<div class="calc__left">
+					<h2 class="calc__title title">
+						Калькулятор потерь от ботов в РРС
+					</h2>
+					<div class="calc__text">
+						Botfaqtor.ru собирает данные по множеству сайтов и выводит примерные показатели по ботам в каждой тематике. Вводите свои данные и смотрите ваши потери от недействиельных кликов (боты и скликиватели).
+					</div>
+					<div class="calc__button-area">
+						<a href="#" class="calc__connect calc__connect--1" data-button="struct1 size2 bradius1 shadows1 colors1">
+							Подключить защиту
+						</a>
+					</div>
+				</div>
+				<div class="calc__right">
+					<form action="" class="calculator">
+						<div class="calculator__box">
+							<div class="calculator__group">
+								<div class="calculator__item calculator__item--50">
+									<label for="" class="calculator__item-label">Посещаемость в месяц из Яндекс Директ</label>
+									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="yandex" placeholder="Количество посетителей" value="5000">
+									<div class="text-info error d-none">Поле не может быть пустым</div>
+								</div>
+								<div class="calculator__item calculator__item--50">
+									<label for="" class="calculator__item-label">Средняя цена клика в Яндекс Директ</label>
+									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="priceyandex" placeholder="Цена клика" value="47">
+									<div class="text-info error d-none">Поле не может быть пустым</div>
+								</div>
+							</div>
+							<div class="calculator__group">
+								<div class="calculator__item calculator__item--50">
+									<label for="" class="calculator__item-label">Посещаемость в месяц из Google Ads</label>
+									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="google" placeholder="Количество посетителей" value="7000">
+									<div class="text-info error d-none">Поле не может быть пустым</div>
+								</div>
+								<div class="calculator__item calculator__item--50">
+									<label for="" class="calculator__item-label">Средняя цена клика в Google Ads</label>
+									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="pricegoogle" placeholder="Цена клика" value="52">
+									<div class="text-info error d-none">Поле не может быть пустым</div>
+								</div>
+							</div>
+							<div class="calculator__group calculator__defselect">
+								<div class="form-control select-css calculator__item calculator__item--100">
+									<label for="" class="calculator__item-label">Тематика сайта</label>
+									<select value="Реклама" class="calculator__item-select" name="theme" id="" data-select="bradius1">
+										<option class="calopt0" value="Выберите тему">Выберите тематику сайта</option>
+										<option class="calopt1" value="Реклама" data="18.4">Реклама</option>
+										<option class="calopt2" value="Услуги" data="21.7">Услуги</option>
+										<option class="calopt3" value="Ecommerce / online retail" data="24.3">Ecommerce / online retail</option>
+										<option class="calopt4" value="Образование" data="14.1">Образование</option>
+										<option class="calopt5" value="Финансы" data="29.9">Финансы</option>
+										<option class="calopt6" value="Юриспруденция" data="19.5">Юриспруденция</option>
+										<option class="calopt7" value="Медицина" data="22.2">Медицина</option>
+										<option class="calopt8" value="Онлайн сервисы" data="23.8">Онлайн сервисы</option>
+										<option class="calopt9" value="Программное обеспечение / IT" data="17.6">Программное обеспечение / IT</option>
+										<option class="calopt10" value="Телеком" data="16.4">Телеком</option>
+										<option class="calopt11" value="Туризм" data="27.2">Туризм</option>
+										<option class="calopt12" value="Недвижимость" data="29.4">Недвижимость</option>
+										<option class="calopt13" value="Авто" data="31.6">Авто</option>
+									</select>
+								</div>
+							</div>
+							<div class="fake-select select">
+								<select class="select__item">
+									<option class="fake_calopt0">Выберите тематику сайта</option>
+									<option class="fake_calopt1">Реклама</option>
+									<option class="fake_calopt2">Услуги</option>
+									<option class="fake_calopt3">Ecommerce / online retail</option>
+									<option class="fake_calopt4">Образование</option>
+									<option class="fake_calopt5">Финансы</option>
+									<option class="fake_calopt6">Юриспруденция</option>
+									<option class="fake_calopt7">Медицина</option>
+									<option class="fake_calopt8">Онлайн сервисы</option>
+									<option class="fake_calopt9">Программное обеспечение / IT</option>
+									<option class="fake_calopt10">Телеком</option>
+									<option class="fake_calopt11">Туризм</option>
+									<option class="fake_calopt12">Недвижимость</option>
+									<option class="fake_calopt13">Авто</option>
+								</select>
+							</div>
+							<div class="calculator__group calculator__lost">
+								<div class="result-calc calculator__lost-wrapper">
+									<div class="info-result">
+										<div class="label-text calculator__lost-title">Вы теряете на скликивании: </div>
+										<div class="info-summ calculator__lost-results">
+											<div class="calculator__lost-item">
+												<div class="calculator__lost-name">
+													Ежегодно:
+												</div>
+												<div class="year">
+													<span></span>₽/год
+												</div>
+											</div>
+											<div class="calculator__lost-item">
+												<div class="calculator__lost-name">
+													Ежемесячно:
+												</div>
+												<div class="month">
+													<span></span>₽/мес
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="calc__button-area">
+						<a href="#" class="calc__connect calc__connect--2" data-button="struct1 size2 bradius1 shadows1 colors1">
+							Подключить защиту
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- cases --> 
+	<section class="cases">
+		<div class="container">
+			<h2 class="cases__title title title--mb1">
+				Кейсы по защите от скликивания
+			</h2>
+			<div class="cases__subtitle subtitle">
+				Ознакомтесь с конкретными случаями экономии благодаря нашему сервису
+			</div>
+			<div class="cases__box">
+				<a href="https://botfaqtor.ru/blog/cases/cases-equipment-repair/" target="_blank" class="cases__item">
+					<div class="cases__item-link">
+						<svg>
+							<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+						</svg>
+					</div>
+					<div class="cases__item-theme">
+						<div class="cases__item-body">
+							<span>Тематика:</span>
+							<p>Ремонт техники </p>
+						</div>
+						<div class="cases__item-saving">
+							Экономия: <span>52 032 руб.</span> 
+						</div>
+					</div>
+					<div class="cases__item-img">
+						<img data-src="img/dist/cases-img1.webp" class="lazyload">
+					</div>
+				</a>
+				<a href="https://botfaqtor.ru/blog/cases/cases_design_of_heating_systems/" target="_blank" class="cases__item">
+					<div class="cases__item-link">
+						<svg>
+							<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+						</svg>
+					</div>
+					<div class="cases__item-theme">
+						<div class="cases__item-body">
+							<span>Тематика:</span>
+							<p>Недвижимость</p>
+						</div>
+						<div class="cases__item-saving">
+							Экономия: <span>197 016 руб. </span> 
+						</div>
+					</div>
+					<div class="cases__item-img">
+						<img data-src="img/dist/cases-img2.webp" class="lazyload">
+					</div>
+				</a>
+				<a href="https://botfaqtor.ru/blog/cases/cases-aggregator/" target="_blank" class="cases__item">
+					<div class="cases__item-link">
+						<svg>
+							<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+						</svg>
+					</div>
+					<div class="cases__item-theme">
+						<div class="cases__item-body">
+							<span>Тематика:</span>
+							<p>Агрегатор ремонта квартир</p>
+						</div>
+						<div class="cases__item-saving">
+							Экономия: <span>42 951 руб. </span> 
+						</div>
+					</div>
+					<div class="cases__item-img">
+						<img data-src="img/dist/cases-img3.webp" class="lazyload">
+					</div>
+				</a>
+			</div>
+			<div class="cases__buttons">
+				<a href="#" class="byelama__register" data-button="struct1 size2 bradius1 shadows1 colors1">
+					Подключить
+				</a>
+				<a href="https://botfaqtor.ru./blog/cases/" target="_blank" class="byelama__register" data-button="struct2 colors2 size6">
+					Все кейсы
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- comments -->
+	<div class="comments">
+		<div class="container2">
+			<h2 class="comments__title title">
+				Отзывы наших клиентов
+			</h2>
+			<div class="comments__wrapper">
+				<div class="comments__item wow moveFromLeft">
+					<div class="comments__item-info">
+						<div class="comments__item-name">
+							Александр (koles***.com)
+						</div>
+						<div class="comments__item-country">
+							Россия
+						</div>
+					</div>
+					<div class="comments__item-client">
+						Сервис, который действительно защищает от склика в Яндексе и Гугле. Пользуюсь сервисом больше года, под защитой 7 сайтов. Проверено! Рекомендую.
+					</div>
+					<div class="comments__item-admins">
+						<span>Ответ администрации:</span>
+						<p>
+							Александр, спасибо за отзыв, мы очень рады нашему сотрудничеству, приятно получать отзывы от клиентов с которыми работаем более года ;)
+						</p>
+					</div>
+				</div>
+				<div class="comments__item wow moveFromRight">
+					<div class="comments__item-info">
+						<div class="comments__item-name">
+							Кирилл А. (еда-***.рф)
+						</div>
+						<div class="comments__item-country">
+							Краснодар
+						</div>
+					</div>
+					<div class="comments__item-client">
+						Сервис, если честно, давно ждал. И очень рад, что он появился!!! Защита работает эффективно и уже с первой недели тестирования, я получил весьма ощутимый результат. CTR по некоторым рекламным кампаниям увеличился в 2-3 раза! Конверсии тоже ощутимо выросли. Короче, рабочая и очень нужная платформа для сегодняшнего рекламного интернет пространства. Спасибо вам ребята!!!
+					</div>
+					<div class="comments__item-admins">
+						<span>Ответ администрации:</span>
+						<p>
+							Кирилл! Спасибо за отзыв! Мы ежедневно работаем над развитием и улучшением сервиса. Скоро будем еще полезнее ;)
+						</p>
+					</div>
+				</div>
+				<div class="comments__item wow moveFromBottom">
+					<div class="comments__item-info">
+						<div class="comments__item-name">
+							Игорь
+						</div>
+						<div class="comments__item-country">
+							Волгоград
+						</div>
+					</div>
+					<div class="comments__item-client">
+						Иногда подрабатывая на буксах периодически делаю задания одного работодателя. неожиданно натыкаюсь на то что я заблокирован ботфактором. Хотя сам рекламодатель на буксах размещает не по одному заданию? где логика?
+					</div>
+					<div class="comments__item-admins">
+						<span>Ответ администрации:</span>
+						<p>
+							Да, мы работаем с подобными сервисами и блокируем исполнителей + скрываем от них показ рекламы в Яндекс Директ и Google Ads. Видимо у SEO специалиста свои KPI, а у маркетологов свои ;)
+						</p>
+					</div>
+				</div>
+				<div class="comments__buttons">
+					<a href="https://botfaqtor.ru./blog/reviews/" class="comments__button" data-button="struct1 size7 colors3 shadows2 gap1 bradius2">
+						<span>Все отзывы</span>
+						<svg class="accordion__icon-open">
+							<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+						</svg>
+					</a>
+					<a href="#" class="comments__button" data-button="struct1 size7 colors3 shadows2 gap1 bradius2">
+						<span>Оставить отзыв</span>
+						<svg class="accordion__icon-open">
+							<use xlink:href="img/svg-ui-sprite.svg#arrow-right-top"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- qa -->
+	<section class="qa">
+		<div class="container2">
+			<h2 class="qa__title title title--mb1">
+				Часто задаваемые вопросы
+			</h2>
+			<div class="qa__subtitle subtitle">
+				Еще больше ответов в <a href="https://botfaqtor.ru/blog/docs/" target="_blank" data-button="struct2 size6 colors2">Базе знаний.</a>
+			</div>
+			<div class="qa__accordions">
+				<div class="accordion">
+					<button class="accordion__control" aria-expanded="false">
+						<span class="accordion__title">Почему это выгодно для меня?</span>
+						<span class="accordion__icon">
+							<svg class="accordion__icon-open">
+								<use xlink:href="img/svg-ui-sprite.svg#plus-icon"></use>
+							</svg>
+							<svg class="accordion__icon-close">
+								<use xlink:href="img/svg-ui-sprite.svg#minus-icon"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="accordion__content" aria-hidden="true">
+						Мы в автоматическом режиме скрываем рекламу от миллионов ботов и сотен тысяч скликивателей, тем самым экономя ваш рекламный бюджет. Тратьте деньги на привлечение клиентов, а не ботов.
+						<br><span>Бонус:</span> При <a target="_blank" href="https://botfaqtor.ru/register">регистрации</a> вы получаете 7 дней бесплатной защиты вашей рекламы в Я.Директ.
+					</div>
+				</div>
+				<div class="accordion">
+					<button class="accordion__control" aria-expanded="false">
+						<span class="accordion__title">Как работает защита от скликивания?</span>
+						<span class="accordion__icon">
+							<svg class="accordion__icon-open">
+								<use xlink:href="img/svg-ui-sprite.svg#plus-icon"></use>
+							</svg>
+							<svg class="accordion__icon-close">
+								<use xlink:href="img/svg-ui-sprite.svg#minus-icon"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="accordion__content" aria-hidden="true">
+						Мы создали <a target="_blank" href="https://botfaqtor.ru/blog/docs/how_it_works_yandex/">отдельный раздел</a> с описанием работы сервиса по защите от скликивания. рекламы (eLama, K50, Click, Alytics, Aori, Rookee и прочих). Мы добавляем только свою надстройку через приложение Botfaqtor API.Директ. Читайте подробнее как работает защита от скликивания Яндекс Директ
+					</div>
+				</div>
+				<div class="accordion">
+					<button class="accordion__control" aria-expanded="false">
+						<span class="accordion__title">Для кого подходит защита от скликивания?</span>
+						<span class="accordion__icon">
+							<svg class="accordion__icon-open">
+								<use xlink:href="img/svg-ui-sprite.svg#plus-icon"></use>
+							</svg>
+							<svg class="accordion__icon-close">
+								<use xlink:href="img/svg-ui-sprite.svg#minus-icon"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="accordion__content" aria-hidden="true">
+						Если вы размещаете рекламу в Яндекс Директ на поиске или в РСЯ, то скорее всего у вас боты. Можете проверить какое примерное кол-во ботов в вашей тематике <a href="https://botfaqtor.ru/calculator/" target="_blank">Калькулятор потерь от ботов в PPC</a>
+					</div>
+				</div>
+				<div class="accordion">
+					<button class="accordion__control" aria-expanded="false">
+						<span class="accordion__title">Вы работаете с eLama, K50, Click, Alytics, Aori, Rookee и др.?</span>
+						<span class="accordion__icon">
+							<svg class="accordion__icon-open">
+								<use xlink:href="img/svg-ui-sprite.svg#plus-icon"></use>
+							</svg>
+							<svg class="accordion__icon-close">
+								<use xlink:href="img/svg-ui-sprite.svg#minus-icon"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="accordion__content" aria-hidden="true">
+						Botfaqtor никак не влияет на работу сторонних сервисов автоматизации контекстной рекламы (eLama, K50, Click, Alytics, Aori, Rookee и прочих). Мы добавляем только свою надстройку через приложение <a href="https://oauth.yandex.ru/client/eeed1a8269064544a54e1cc293fce5bd" target="_blank">Botfaqtor API.Директ</a>. Читайте подробнее как работает <a href="https://botfaqtor.ru/blog/docs/how_it_works_yandex/" target="_blank">от скликивания Яндекс Директ</a>
+					</div>
+				</div>
+				<div class="accordion">
+					<button class="accordion__control" aria-expanded="false">
+						<span class="accordion__title">Защита от скликивания не навредит моему сайту?</span>
+						<span class="accordion__icon">
+							<svg class="accordion__icon-open">
+								<use xlink:href="img/svg-ui-sprite.svg#plus-icon"></use>
+							</svg>
+							<svg class="accordion__icon-close">
+								<use xlink:href="img/svg-ui-sprite.svg#minus-icon"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="accordion__content" aria-hidden="true">
+						Нет, не переживайте, мы добавляем свое условие в настройку ваших рекламных кампаний, выбранных для защиты, не трогая ваши настройки. Полная автоматизация защиты от ботов при помощи API-приложений, зарегистрированных в Яндекс - <a href="https://oauth.yandex.ru/client/eeed1a8269064544a54e1cc293fce5bd" target="_blank">Botfaqtor API.Директ</a> и <a href="https://oauth.yandex.ru/client/18c17b6abfd542a9addd4b27f722a53b" target="_blank">Botfaqtor API.Метрика</a>.
+					</div>
+				</div>
+				<div class="accordion">
+					<button class="accordion__control" aria-expanded="false">
+						<span class="accordion__title">Какие есть способы оплаты?</span>
+						<span class="accordion__icon">
+							<svg class="accordion__icon-open">
+								<use xlink:href="img/svg-ui-sprite.svg#plus-icon"></use>
+							</svg>
+							<svg class="accordion__icon-close">
+								<use xlink:href="img/svg-ui-sprite.svg#minus-icon"></use>
+							</svg>
+						</span>
+					</button>
+					<div class="accordion__content" aria-hidden="true">
+						Оплатить сервис можно банковской картой, платежами через Яндекс.Деньги, QIWI, есть и другие способы оплаты. Для юридических лиц мы выставляем счета и предоставляем закрывающие документы для бухгалтерии. Работаем по ЭДО (Диадок).
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- get -->
+	<div class="get">
+		<div class="container">
+			<h2 class="get__title title">
+				Подключи защиту от ботов бесплатно!
+			</h2>
+			<div class="get__button-cell">
+				<a href="#" data-button="struct1 size2 bradius1 shadows1 colors1">
+					Подключить
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- cont -->
+	<div class="cont">
+		<div class="cont__container container2">
+			<div class="cont__wrapper">
+				<div class="cont__left">
+					<h2 class="cont__title title title--mb1">
+						Контакты
+					</h2>
+					<div class="cont__text">
+						г. Москва, ул. Щепкина, д.28, офис 413
+						пн-пт: с 10:00 до 19:00
+					</div>
+					<div class="cont__info">
+						<div class="cont__info-item">
+							<div class="cont__info-title">
+								Служба поддержки
+							</div>
+							<a href="mailto:info@botfaqtor.ru" class="cont__info-mail">
+								info@botfaqtor.ru
+							</a>
+							<a href="tel:74959466031" class="cont__info-phone">
+								+7 (495) 946-6031
+							</a>
+						</div>
+						<div class="cont__info-item">
+							<div class="cont__info-title">
+								Контакты для СМИ и медиа
+							</div>
+							<a href="mailto:pr@botfaqtor.ru" class="cont__info-mail">
+								pr@botfaqtor.ru
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="cont__right">
+					<div class="cont__map">
+						<!-- <div class="ymap-container">
+							<div class="loader loader-default"></div>
+							<div id="map"></div>
+						</div> -->
+						<div class="lazy-iframe" width="100%" height="100%" style="position: relative"
+							data-map="https://yandex.ru/map-widget/v1/?um=constructor%3A0510159edeb1f490c7d1fc21789ff6a4240dc7786cf24866d32b022e544178dd&amp;source=constructor">
+						</div>
+						<!-- https://yandex.ru/maps/?um=constructor%3A0510159edeb1f490c7d1fc21789ff6a4240dc7786cf24866d32b022e544178dd&source=constructorLink -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container2">
+			<div class="footer__wrapper">
+				<div class="footer__box">
+					<div class="footer__column">
+						<h3 class="footer__title">
+							Сервисы защиты от ботов
+						</h3>
+						<ul class="footer__menu">
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./yandex-clickfraud/" class="footer__link">
+									Защита от скликивания Я.Директ
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./google-clickfraud/" class="footer__link">
+									Защита от скликивания Google ADS
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./sites-antibot/" class="footer__link">
+									Антибот для сайта
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="#" class="footer__link">
+									Защита баннера
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="#" class="footer__link">
+									Сокращение ссылок
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="#" class="footer__link footer__link--hl">
+									Оплата за результат
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="#" class="footer__link footer__link--hl">
+									Защита для малого бизнеса
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">
+							Ресурсы
+						</h3>
+						<ul class="footer__menu">
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./blog/" class="footer__link">
+									Блог (исследования, новости, статьи)
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./utm/" class="footer__link">
+									Генератор UTM-меток
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./sources-check/" class="footer__link">
+									Анализ источников трафика
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./calculator/" class="footer__link">
+									Калькулятор потерь от ботов в PPC
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">
+							Пользователям
+						</h3>
+						<ul class="footer__menu">
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./blog/docs/" class="footer__link">
+									Вопросы/ответы
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./blog/cases/" class="footer__link">
+									Кейсы клиентов
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./blog/reviews/" class="footer__link">
+									Отзывы
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./affiliate-program/" class="footer__link">
+									Партнерская программа
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./blog/friends/" class="footer__link">
+									Бонусы и подарки от партнеров
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://calendly.com/botfaqtor/30?month=2023-03" class="footer__link footer__link--hl">
+									Записаться на демонстрацию
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">
+							Информация
+						</h3>
+						<ul class="footer__menu">
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./docs/oferta/" class="footer__link">
+									Договор-оферта
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./docs/confidential/" class="footer__link">
+									Политика конфиденциальности
+								</a>
+							</li>
+							<li class="footer__list">
+								<a href="https://botfaqtor.ru./docs/agreement/" class="footer__link">
+									Пользовательское соглашение
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__payments">
+					<div class="footer__payments-box">
+						<a href="#" class="footer__payments-item">
+							<img src="img/dist/payments-icon1.svg">
+						</a>
+						<a href="#" class="footer__payments-item">
+							<img src="img/dist/payments-icon2.svg">
+						</a>
+						<a href="#" class="footer__payments-item">
+							<img src="img/dist/payments-icon3.svg">
+						</a>
+						<a href="#" class="footer__payments-item">
+							<img src="img/dist/payments-icon4.svg">
+						</a>
+						<a href="#" class="footer__payments-item">
+							<img src="img/dist/payments-icon5.svg">
+						</a>
+						<a href="#" class="footer__payments-item">
+							<img src="img/dist/payments-icon6.svg">
+						</a>
+					</div>
+					<div class="footer__payments-text">
+						Банковский перевод. Безналичный расчет.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__roots">
+				© Botfaqtor 2017 - 2023
+			</div>
+			<div class="footer__right">
+				<div class="footer__socials">
+					<div class="footer__socials-title">
+						Мы в соцсетях
+					</div>
+					<div class="footer__socials-box">
+						<a href="#" class="footer__social">
+							<svg>
+								<use xlink:href="img/svg-ui-sprite.svg#facebook-icon"></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__social">
+							<svg>
+								<use xlink:href="img/svg-ui-sprite.svg#vk-icon"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- Внешние скрипты -->
+	<!-- roll-network -->
+	<div class="roll-network">
+        <div class="block-roll">
+            <a href="#" onclick="Verbox('openSupport'); return false;" class="message-list">Задать вопрос</a>
+            <div class="ico-roll-network"></div>
+            <div class="block-roll-network">
+                <div class="item"><a target="_blank" href="#" class="chat-chat-icon"
+                        onclick="Verbox('openSupport'); return false;">Задать вопрос</a></div>
+                <div class="item"><a target="_blank" href="tel:+79251326680" class="chat-phone-icon">Позвонить</a></div>
+                <div class="item"><a target="_blank" href="tg://resolve?domain=BotfaqtorT_bot"
+                        class="chat-teleg-icon">Написать в Telegram</a></div>
+                <div class="item"><a target="_blank" href="https://api.whatsapp.com/send?phone=79251326680"
+                        class="chat-whats-icon">Написать в Whatsapp</a></div>
+                <div class="item"><a target="_blank" href="viber://pa?chatURI=botfaqtor-ru"
+                        class="chat-viber-icon">Написать в Viber</a></div>
+                <div class="item"><a target="_blank" href="https://vk.com/write-169372604" class="chat-vk-icon">Написать
+                        в VK</a></div>
+                <div class="item"><a target="_blank" href="https://www.facebook.com/messages/t/359439317992661"
+                        class="chat-fb-icon">Написать в Facebook</a></div>
+            </div>
+        </div>
+    </div>
+	<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMFZDKB" height="0" width="0"
+		style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<script>
+        var fired = false;
+        window.addEventListener('scroll', () => {
+            if (fired === false) {
+                fired = true;
+                setTimeout(() => {
+                    var yaParams = {};
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'https://ip.up66.ru/', true);
+                    xhr.onload = function () {
+                        yaParams.ip = this.responseText;
+                    }
+                    xhr.send();
+
+                    (function (m, e, t, r, i, k, a) {
+                        m[i] = m[i] || function () {
+                            (m[i].a = m[i].a || []).push(arguments)
+                        };
+                        m[i].l = 1 * new Date();
+                        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k
+                            .src = r, a.parentNode.insertBefore(k, a)
+                    })
+                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+                    ym(49731991, "init", {
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+
+                }, 1000)
+            }
+        });
+        document.write("<a href='//www.liveinternet.ru/click' " +
+            "target=_blank><img src='//counter.yadro.ru/hit?t39.1;r" +
+            escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+                ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                    screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document
+                .URL) +
+            ";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+            "' alt='' title='LiveInternet' " +
+            "border='0' width='31' height='31' style=\"position:absolute;left:-10000px;top:-10000px;\" ><\/a>"
+        );
+    </script>
+	<!--LiveInternet counter-->
+	<script type="text/javascript">
+		document.write("<a href='//www.liveinternet.ru/click' " +
+			"target=_blank><img src='//counter.yadro.ru/hit?t39.1;r" +
+			escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+				";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+					screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+			";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+			"' alt='' title='LiveInternet' " +
+			"border='0' width='31' height='31' style=\"position:absolute;left:-10000px;top:-10000px;\" ><\/a>")
+	</script>
+	<!--/LiveInternet-->
+
+
+
+
 
 	
 
 
+
+	
 	<!-- Scripts -->
 	<!-- build:js -->
-	<!-- jQuery -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<!-- Slick slider JS -->
-	<script src="libs/slick-slider/slick.min.js"></script>
-	<!-- Magnific Popup JS -->
-	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<!-- Roll network js -->
+	<script src="libs/roll-network/roll-network.js"></script>
+	<!-- lazys -->
+	<script src="js/lazy-iframes.js"></script>
+	<script src="js/lazysizes.min.js"></script>
+	<!-- Scroll lock JS -->
+	<script src="libs/scroll-lock/scroll-lock.min.js"></script>
+	<!-- WoW js -->
+	<script src="js/wow.min.js"></script>
 	<!-- Базовые скрипты javascript -->
 	<script src="js/main.js"></script>
 	<!-- endbuild -->
+	<script>
+		wow = new WOW();
+		wow.init();
+	</script>
 </body>
 
 </html>

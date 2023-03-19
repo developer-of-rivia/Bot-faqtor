@@ -1,141 +1,405 @@
-$(document).ready(function () {
-	// Что-то случается при клике
-	$('.block').on('click', function () {
-		$('.block').toggleClass(' block');
-	});
-	// открытие попап окна по классу
-	$(".popup-link").magnificPopup({
+$(function () {
+    /* Custom Select */
+    //Получаем все "select" по селектору
+    const selects = document.querySelectorAll('.select__item')
+    //переборка по полученным "select"
+    for (let i = 0; i < selects.length; i++) {
+        const select = selects[i]
+        //получаем все "option" внутри "select"
+        const options = select.querySelectorAll('option')
+        //создаем кастомный "select"
+        const cSelect = document.createElement('div')
+        const cSelectList = document.createElement('div')
+        const cSelectCurrent = document.createElement('div');
+        cSelectCurrent.setAttribute('tabindex', '0')
 
-	});
-	// textarea тянется вместе с содержимым
-	autosize(document.querySelectorAll('textarea'));
-	// табы
-	$('.tabs').each(function () {
-		let ths = $(this);
-		ths.find('.tabs__item').not(':first').hide();
-		ths.find('.tabs__link').click(function () {
-			ths.find('.tabs__link').removeClass('active').eq($(this).index()).addClass('active');
-			ths.find('.tabs__item').hide().eq($(this).index()).fadeIn()
-		}).eq(0).addClass('active');
-	});
-	// спойлер
-	$('.spoiler__body').hide(300);
-	$(document).on('click', '.spoiler__head', function (e) {
-		e.preventDefault()
-		$(this).parents('.spoiler').toggleClass("active").find('.spoiler__body').slideToggle();
-	});
-	// слайдер
-	$('.example__slider').slick({
-		slidesToShow: 2,
-		slidesToScroll: 2,
-		dots: false,
-		arrow: false,
-		appendArrows: $('.example__slider-arrows'),
-		appendDots: $('.example__slider-dots'),
-		prevArrow: '<button class="slick-prev example__slider-prev" aria-label="Previous" type="button"><img src="img/arrow-left.png"></button>',
-		nextArrow: '<button class="slick-next example__slider-next" aria-label="Next" type="button"><img src="img/arrow-right.png"></button>',
-		responsive: [
-			{
-				breakpoint: 1210,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 991,
-				settings: {
-					slidesToShow: 2,
-					dots: true,
-					arrow: true,
-				}
-			},
-		]
-	});
-	$('.__slider').slick({
-		slidesToShow: 2,
-		slidesToScroll: 2,
-		dots: false,
-		arrow: false,
-		appendArrows: $('.__arrows'),
-		appendDots: $('.__dots'),
-		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><img src="img/arrow-left.png"></button>',
-		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="img/arrow-right.png"></button>',
-	});
-	// select
-	let currentValue = '';
-	let currentImg = '';
-	$('.select__head').on('click', function () {
-		$(this).next().toggleClass(' select__box--active');
-		$(this).toggleClass(' select__head--active');
-	})
-	$('.select__item').on('click', function () {
-		currentValue = $(this).children('span').text();
-		currentImg = $(this).children('img').attr('src');
-		$(this).closest('.select__box').children('.select__item').removeClass('select__item--curent')
-		$(this).toggleClass('select__item--curent');
-		$(this).closest('.select__box').siblings('.select__head').toggleClass('select__head--active');
-		$(this).closest('.select__box').siblings('.select__head').children('span').html(currentValue);
-		$(this).closest('.select__box').toggleClass(' select__box--active');
-		$(this).closest('.select__box').siblings('.select__head').children('.select__chosed-icon').prop('src', currentImg);
-		$(this).closest('.select__box').siblings('.select__input').children('input').attr('value', currentValue);
-	});
+        select.setAttribute('tabindex', '-1')
+        //задем классы и атрибуты кастомному "select"
+        cSelect.className = 'custom-select'
+        cSelectList.className = 'custom-select__list'
+        cSelectCurrent.className = 'custom-select__current'
+        //по умолчанию у button будет type="submit", поэтому меням на type="button" чтобы избежать отправку формы при клие на кастомный "select"
+        cSelectCurrent.setAttribute('type', 'button')
+        //создаем вложенность созданных элементов
+        cSelect.append(cSelectCurrent, cSelectList)
+        //добавляем кастоный "select" сразу после оргинального "select"
+        select.after(cSelect)
+        //получаем список и значения "option" из "select", затем создаём кастомный "option" для кастомного "select"
+        const createCustomDom = function (x, y) {
+            let selectItems = ''
+            for (var i = 0; i < options.length; i++) {
+                selectItems += '<button type="button" class="custom-select__item" data-value="' + options[i].value + '">' + options[i].text + '</button>'
+            }
+            cSelectList.innerHTML = selectItems
+            x(), y();
+        }
+        //открываем-закрываем выпадающий список по клику
+        const toggleClass = () => { cSelect.classList.toggle('custom-select--show') }
+        //присваиваем текстовое первое значение "option" в кастомном "select"
+        const currentTextValue = () => cSelectCurrent.textContent = cSelectList.children[0].textContent
+        //получаем и задаем значения text/value 
+        const currentValue = () => {
+            const items = cSelectList.children
+            for (var el = 0; el < items.length; el++) {
+                let selectValue = items[el].getAttribute('data-value')
+                let selectText = items[el].textContent
+                items[el].addEventListener('click', () => {
+                    cSelect.classList.remove('custom-select--show')
+                    cSelectCurrent.textContent = selectText
+                    select.value = selectValue
+                })
+            }
+        }
+        const desctopFn = () => {
+            cSelectCurrent.addEventListener('click', toggleClass);
+            cSelectCurrent.addEventListener('keydown', (event) => {
+                if (event.code == 'Enter' || event.code == 'Escape') {
+                    toggleClass()
+                }
+            });
+        }
+        const mobileFn = () => {
+            for (let j = 0; j < selects.length; j++) {
+                let mobileSelect = selects[j]
+        mobileSelect.classList.add('select__item--mobile')
+                mobileSelect.addEventListener('change', () => {
+                    mobileSelect.nextElementSibling.querySelector('.custom-select__current').textContent = mobileSelect.value
+                })
+            }
+        }
+        createCustomDom(currentTextValue, currentValue)
+        //закрываем выпадающий список по клику вне области кастомного селекта
+        document.addEventListener('mouseup', (e) => {
+            if (!cSelect.contains(e.target)) cSelect.classList.remove('custom-select--show')
+        })
+        detectmob(mobileFn, desctopFn)
+        function detectmob(x, y) {
+            if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ) {
+                x();
+            }
+            else {
+                y();
+            }
+        }
+    }
 
 
-	/* input file */
-	let inputFile = $('#myInput');
-	let button = $('#myButton');
-	let filesContainer = $('#myFiles');
-	let files = [];
+    // калькулятор
+    $(".calculator__group input").keyup(function () {
+        $(this).val(thousandSeparator($(this).val().replace(/[^0-9]/g, "")));
+        var yandex = $("[name='yandex']").val().replace(/\s/g, '');
+        var google = $("[name='google']").val().replace(/\s/g, '');
+        var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
+        var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+        //var theme = $(".theme option").prop('selected', true).change().attr('data');
+        var theme = "";
 
-	inputFile.change(function () {
-		let newFiles = [];
-		for (let index = 0; index < inputFile[0].files.length; index++) {
-			let file = inputFile[0].files[index];
-			newFiles.push(file);
-			files.push(file);
-		}
+        $( ".calculator__group select option:selected" ).each(function() {
+            theme += $( this ).attr('data') + " ";
+        });
 
-		$('.upload-has__delete').addClass('upload-has__delete--open');
+        if(priceyandex == ''){
+            if(theme == undefined){
+                resultyandex = (yandex / 100 * theme)*50;
+            }else{
+                resultyandex = (yandex / 100 * 25)*50;
+            }
+        }else{
+            if(theme == undefined){
+                resultyandex = (yandex / 100 * theme)*priceyandex;
+            }else{
+                resultyandex = (yandex / 100 * 25)*priceyandex;
+            }
+        }
 
-		newFiles.forEach(file => {
-			let fileElement = $(`<p>${file.name}</p>`);
-			fileElement.data('fileData', file);
-			filesContainer.append(fileElement);
+        if(pricegoogle == ''){
+            if(theme == undefined){
+                resultgoogle = (google / 100 * theme)*50;
+            }else{
+                resultgoogle = (google / 100 * 25)*50;
+            }
+        }else{
+            if(theme == undefined){
+                resultgoogle = (google / 100 * theme)*pricegoogle;
+            }else{
+                resultgoogle = (google / 100 * 25)*pricegoogle;
+            }
+        }
 
-			fileElement.click(function (event) {
-				let fileElement = $(event.target);
-				let indexToRemove = files.indexOf(fileElement.data('fileData'));
-				fileElement.remove();
-				files.splice(indexToRemove, 1);
-			});
+
+        resultSUM = resultyandex+resultgoogle;
+        var sumyear = resultSUM*12
+
+        if(sumyear || resultSUM){
+            $('.year span').text(thousandSeparator(Math.ceil(sumyear)));
+            $('.month span').text(thousandSeparator(Math.ceil(resultSUM)));
+        }else{
+            $('.year span').text('0');
+            $('.month span').text('0');
+        }
+
+    });
+
+    $(".calculator__group select").change(function(){
+        var yandex = $("[name='yandex']").val().replace(/\s/g, '');
+        var google = $("[name='google']").val().replace(/\s/g, '');
+
+        var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
+        var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+
+        var theme = "";
+        $( ".calculator__group select option:selected" ).each(function() {
+            theme += $( this ).attr('data') + " ";
+        });
+
+
+        if(priceyandex == ''){
+            resultyandex = (yandex / 100 * theme)*50;
+        }else{
+            resultyandex = (yandex / 100 * theme)*priceyandex;
+        }
+
+        if(pricegoogle == ''){
+            resultgoogle = (google / 100 * theme)*50;
+        }else{
+            resultgoogle = (google / 100 * theme)*pricegoogle  
+        }
+
+        resultSUM = resultyandex+resultgoogle;
+        var sumyear = resultSUM*12
+
+
+        if(sumyear || resultSUM){
+            $('.year span').text(thousandSeparator(Math.ceil(sumyear)));
+            $('.month span').text(thousandSeparator(Math.ceil(resultSUM)));
+        }else{
+            $('.year span').text('0');
+            $('.month span').text('0');
+        }
+
+    });
+
+    var thousandSeparator = function (str) {
+    var parts = (str + '').split('.'),
+        main = parts[0],
+        len = main.length,
+        output = '',
+        i = len - 1;
+
+    while (i >= 0) {
+        output = main.charAt(i) + output;
+        if ((len - i) % 3 === 0 && i > 0) {
+            output = ' ' + output;
+        }
+        --i;
+    }
+
+    if (parts.length > 1) {
+        output += '.' + parts[1];
+    }
+    return output;
+    };
+
+
+    
+    $('.custom-select__item').on('click', function(){
+        if($(this).data('value') == 'Выберите тематику сайта'){
+            $('.custom-select__current').removeClass('custom-select__current--notdef');
+        } else {
+            $('.custom-select__current').addClass('custom-select__current--notdef');
+        }
+    });
+
+    $('.custom-select__item[data-value="Выберите тематику сайта"]').on('click', function(){
+        $('.calopt0').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Реклама"]').on('click', function(){
+        $('.calopt1').prop('selected',true);
+
+    });
+    $('.custom-select__item[data-value="Услуги"]').on('click', function(){
+        $('.calopt2').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Ecommerce / online retail"]').on('click', function(){
+        $('.calopt3').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Образование"]').on('click', function(){
+        $('.calopt4').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Финансы"]').on('click', function(){
+        $('.calopt5').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Юриспруденция"]').on('click', function(){
+        $('.calopt6').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Медицина"]').on('click', function(){
+        $('.calopt7').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Онлайн сервисы"]').on('click', function(){
+        $('.calopt8').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Медицина"]').on('click', function(){
+        $('.calopt7').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Онлайн сервисы"]').on('click', function(){
+        $('.calopt8').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Программное обеспечение / IT"]').on('click', function(){
+        $('.calopt9').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Телеком"]').on('click', function(){
+        $('.calopt10').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Туризм"]').on('click', function(){
+        $('.calopt11').prop('selected',true);
+    });
+    $('.custom-select__item[data-value="Недвижимость"]').on('click', function(){
+        $('.calopt12').prop('selected',true);
+    })
+    $('.custom-select__item[data-value="Авто"]').on('click', function(){
+        $('.calopt13').prop('selected',true);
+    });
+    
+
+    $('.custom-select__item').on('click', function(){
+        var yandex = $("[name='yandex']").val().replace(/\s/g, '');
+        var google = $("[name='google']").val().replace(/\s/g, '');
+
+        var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
+        var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+
+        var theme = "";
+        $( ".calculator__group select option:selected" ).each(function() {
+            theme += $( this ).attr('data') + " ";
+        });
+
+
+        if(priceyandex == ''){
+            resultyandex = (yandex / 100 * theme)*50;
+        }else{
+            resultyandex = (yandex / 100 * theme)*priceyandex;
+        }
+
+        if(pricegoogle == ''){
+            resultgoogle = (google / 100 * theme)*50;
+        }else{
+            resultgoogle = (google / 100 * theme)*pricegoogle  
+        }
+
+        resultSUM = resultyandex+resultgoogle;
+        var sumyear = resultSUM*12
+
+
+        if(sumyear || resultSUM){
+            $('.year span').text(thousandSeparator(Math.ceil(sumyear)));
+            $('.month span').text(thousandSeparator(Math.ceil(resultSUM)));
+        }else{
+            $('.year span').text('0');
+            $('.month span').text('0');
+        }
+    })
+
+
+
+
+
+
+
+    // dropdown
+    let dropdowns = document.querySelectorAll('.nav__dropdown');
+	dropdowns.forEach(dropdown => {
+        document.addEventListener('click', (e) => {
+            if(!e.composedPath().includes(dropdown)){
+                dropdown.classList.remove('nav__dropdown--open');
+            }
+        });
+
+		dropdown.addEventListener('click', function(){
+			dropdown.classList.toggle('nav__dropdown--open');
 		});
 	});
-	button.click(function () {
-		inputFile.click();
+
+
+	// menu
+	let burgerIcon = document.querySelector('.header__toggle-burger');
+    let closeIcon = document.querySelector('.header__toggle-close');
+    let menu = document.querySelector('.header__panel');
+    let scrollObject = document.querySelector('.header__panel');
+
+	burgerIcon.addEventListener('click', function(){
+		closeIcon.classList.remove('hidden');
+		burgerIcon.classList.add('hidden');
+        menu.classList.add('header__panel--open');
+        scrollLock.disablePageScroll(scrollObject);
+    })
+    closeIcon.addEventListener('click', function(){
+		closeIcon.classList.add('hidden');
+		burgerIcon.classList.remove('hidden');
+        menu.classList.remove('header__panel--open');
+        scrollLock.enablePageScroll(scrollObject);
+    })
+
+	// fixed header
+	window.onscroll = function showHeader() {
+        var header = document.querySelector('.header');
+        if(window.pageYOffset > 100){
+            header.classList.add('header_fixed');
+        } else{
+            header.classList.remove('header_fixed');
+        }
+    }
+
+
+
+	// tabs
+	let tab = document.querySelectorAll('.tabs__head'),
+	tabContent = document.querySelectorAll('.tabs__item');
+		tab.forEach(function(tab, i) {
+		tab.addEventListener('click', function() {
+			hideTab();
+			this.classList.add('tabs__item--show');
+			tabContent[i].classList.add('tabs__item--show');
+		});
 	});
-	$('.upload-has__delete').on('click', function () {
-		document.getElementById("myInput").value = "";
-		document.getElementById("myFiles").innerHTML = "";
-		$('.upload-has__delete').removeClass('upload-has__delete--open');
-	});
+
+	function hideTab() {
+		tab.forEach((item) => {
+			item.classList.remove('tabs__item--show');
+		});
+		tabContent.forEach((item) => {
+			item.classList.remove('tabs__item--show');
+		});
+	}
 
 
+	// accordion
+	const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(el => {
+        el.addEventListener('click', (e) => {
+            const self = e.currentTarget;
+            const control = self.querySelector('.accordion__control');
+            const content = self.querySelector('.accordion__content');
 
+            self.classList.toggle('open');
 
+            // если открыт аккордеон
+            if (self.classList.contains('open')) {
+                control.setAttribute('aria-expanded', true);
+                content.setAttribute('aria-hidden', false);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                control.setAttribute('aria-expanded', false);
+                content.setAttribute('aria-hidden', true);
+                content.style.maxHeight = null;
+            }
+        });
+    });
 
-	/* count input */
-	// Убавляем кол-во по клику
-	$('.quantity_inner .bt_minus').click(function () {
-		let $input = $(this).parent().find('.quantity');
-		let count = parseInt($input.val()) - 1;
-		count = count < 1 ? 1 : count;
-		$input.val(count);
-	});
-	// Прибавляем кол-во по клику
-	$('.quantity_inner .bt_plus').click(function () {
-		let $input = $(this).parent().find('.quantity');
-		let count = parseInt($input.val()) + 1;
-		count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
-		$input.val(parseInt(count));
-	});
 });

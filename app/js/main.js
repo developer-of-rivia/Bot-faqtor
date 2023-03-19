@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function() {
     /* Custom Select */
     //Получаем все "select" по селектору
     const selects = document.querySelectorAll('.select__item')
@@ -306,12 +306,6 @@ $(function () {
         }
     })
 
-
-
-
-
-
-
     // dropdown
     let dropdowns = document.querySelectorAll('.nav__dropdown');
 	dropdowns.forEach(dropdown => {
@@ -325,7 +319,6 @@ $(function () {
 			dropdown.classList.toggle('nav__dropdown--open');
 		});
 	});
-
 
 	// menu
 	let burgerIcon = document.querySelector('.header__toggle-burger');
@@ -356,8 +349,6 @@ $(function () {
         }
     }
 
-
-
 	// tabs
 	let tab = document.querySelectorAll('.tabs__head'),
 	tabContent = document.querySelectorAll('.tabs__item');
@@ -377,8 +368,6 @@ $(function () {
 			item.classList.remove('tabs__item--show');
 		});
 	}
-
-
 	// accordion
 	const accordions = document.querySelectorAll('.accordion');
     accordions.forEach(el => {
@@ -401,5 +390,41 @@ $(function () {
             }
         });
     });
+
+
+
+    // $(window).on("scroll", function() {
+    //     let scroll = window.scrollY;
+    //     let element_position_by_number = 100;
+    //     // also you can get element position by offset method like this => $("element").offset().top
+    //     if (scroll >= element_position_by_number) {
+    //       runCounter();
+    //     }
+    // })
+
+    
+
+
+    function runCounter () {
+        $('.numbers__item-count').each(function(){
+          const This = $(this);
+          $({Count: This.text()}).animate(
+            {Count: This.parent().attr("data-count")},
+            {
+              duration: 2000,
+              easing: "linear",
+              step: function(){
+                This.text(Math.floor(this.Count))
+              },
+              complete: function(){
+                This.text(this.Count).css({color:"red"})
+              }
+            }
+          )
+        })
+    }
+    
+
+
 
 });

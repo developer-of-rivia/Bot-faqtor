@@ -1,0 +1,274 @@
+.roll-network {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+}
+
+.roll-network .block-roll {
+    position: relative;
+}
+
+.roll-network .block-roll.open-is .block-roll-network {
+    overflow: visible;
+    height: 300px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1) !important;
+    z-index: 3;
+}
+
+.roll-network .block-roll .ico-roll-network::after {
+    content: "";
+    background-image: url(../../img/dist/mess-01.svg);
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+}
+
+.roll-network .block-roll.open-is .ico-roll-network::after {
+    content: "+";
+    background-image: none;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 100;
+    transform: rotate(45deg);
+    color: #fff;
+    line-height: 32px;
+}
+
+.roll-network .block-roll .block-roll-network {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+    width: 215px;
+    bottom: 80px;
+}
+
+.roll-network .block-roll.open-is .block-roll-network::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    bottom: -12px !important;
+    border-left: 12px solid transparent !important;
+    border-right: 12px solid transparent !important;
+    border-top-width: 12px;
+    border-top-style: solid !important;
+    z-index: 0 !important;
+    border-color: #fff;
+    right: 16px;
+}
+
+.roll-network .block-roll.open-is .message-list {
+    display: none;
+}
+
+.roll-network .block-roll .ico-roll-network {
+    background-color: #688BE1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1) !important;
+}
+
+.roll-network .block-roll .block-roll-network {
+    position: absolute;
+    bottom: 80px;
+}
+
+.roll-network .block-roll .block-roll-network .item {
+    position: relative;
+    padding: 5px 15px;
+}
+
+.roll-network .block-roll .block-roll-network .item:hover {
+    background-color: #f1f2f7;
+}
+
+.roll-network .block-roll .block-roll-network a {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    padding-left: 40px;
+    height: 30px;
+    line-height: 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #425660;
+}
+
+.roll-network .block-roll .block-roll-network a:hover {
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-teleg-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/teleg.svg);
+    background-color: #27A3E3;
+    background-size: 16px 16px;
+    background-position: 45% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-viber-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/viber.svg);
+    background-color: #8B66A9;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-phone-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/phone.svg);
+    background-color: #364952;
+    background-size: 16px 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-whats-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/whatsapp.svg);
+    background-color: #25CC62;
+    background-size: 16px 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-vk-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/vk.svg);
+    background-color: #4E7DB2;
+    background-size: 16px 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-fb-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/fb.svg);
+    background-color: #4867AA;
+    background-size: 16px 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .block-roll .block-roll-network a.chat-chat-icon::after {
+    content: "";
+    background-image: url(../../img/dist/network/chat.svg);
+    background-color: #800c7a;
+    background-size: 16px 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+}
+
+.roll-network .message-list {
+    position: absolute;
+    bottom: 80px;
+    right: 0px;
+    width: 130px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1) !important;
+    text-decoration: none;
+    font-size: 14px;
+    color: #425660;
+    text-align: center;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.roll-network .message-list:hover {
+    color: #6695E2;
+    transition: all 0.3s ease-in-out;
+}
+
+.roll-network .message-list::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    bottom: -12px !important;
+    border-left: 12px solid transparent !important;
+    border-right: 12px solid transparent !important;
+    border-top-width: 12px;
+    border-top-style: solid !important;
+    z-index: 0 !important;
+    border-color: #fff;
+    right: 16px;
+}
