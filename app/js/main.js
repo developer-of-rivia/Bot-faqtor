@@ -402,29 +402,25 @@ $(document).ready(function() {
     //     }
     // })
 
-    
 
 
-    function runCounter () {
-        $('.numbers__item-count').each(function(){
-          const This = $(this);
-          $({Count: This.text()}).animate(
-            {Count: This.parent().attr("data-count")},
-            {
-              duration: 2000,
-              easing: "linear",
-              step: function(){
-                This.text(Math.floor(this.Count))
-              },
-              complete: function(){
-                This.text(this.Count).css({color:"red"})
-              }
-            }
-          )
-        })
-    }
-    
-
-
+    // function runCounter () {
+    //     $('.numbers__item-count').each(function(){
+    //       const This = $(this);
+    //       $({Count: This.text()}).animate(
+    //         {Count: This.parent().attr("data-count")},
+    //         {
+    //           duration: 2000,
+    //           easing: "linear",
+    //           step: function(){
+    //             This.text(Math.floor(this.Count))
+    //           },
+    //           complete: function(){
+    //             This.text(this.Count).css({color:"red"})
+    //           }
+    //         }
+    //       )
+    //     })
+    // }
 
 });
