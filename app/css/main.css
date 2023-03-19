@@ -874,10 +874,11 @@ a[data-button~="colors2"]:hover:before {
 
 @media (max-width: 991px) {
   .header__panel {
-    transition: 0.2s ease;
+    opacity: 0;
+    transition: 0.2s opacity ease;
     position: fixed;
-    left: 0;
-    top: -100vh;
+    top: 81px;
+    right: -100vw;
     width: 100vw;
     height: calc(100vh - 81px);
     background: #fff;
@@ -891,7 +892,8 @@ a[data-button~="colors2"]:hover:before {
 
 @media (max-width: 991px) {
   .header__panel--open {
-    top: 81px;
+    right: 0;
+    opacity: 1;
   }
 }
 
