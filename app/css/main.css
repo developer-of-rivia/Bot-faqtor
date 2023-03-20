@@ -2594,6 +2594,10 @@ a[data-button~="colors2"]:hover:before {
   }
 }
 
+.calculator__group--hidden {
+  display: none;
+}
+
 .calculator__item {
   display: flex;
   flex-direction: column;
