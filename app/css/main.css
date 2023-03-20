@@ -1214,6 +1214,8 @@ a[data-button~="colors2"]:hover:before {
 @media (max-width: 1370px) {
   .main__right {
     flex: 500px 0 0;
+    right: -130px;
+    padding-right: 130px;
   }
 }
 
@@ -1239,9 +1241,15 @@ a[data-button~="colors2"]:hover:before {
   z-index: 1;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1370px) {
   .main__shadow {
     right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .main__shadow {
+    right: -30px;
   }
 }
 
