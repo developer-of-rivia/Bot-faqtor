@@ -3081,13 +3081,12 @@ a[data-button~="colors2"]:hover:before {
 /* cont */
 .cont {
   height: 500px;
-  background: #f7f9fd;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 991px) {
   .cont {
     height: auto;
-    background: #fff;
   }
 }
 
