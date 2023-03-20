@@ -874,7 +874,7 @@ a[data-button~="colors2"]:hover:before {
 
 @media (max-width: 991px) {
   .header__panel {
-    opacity: 0;
+    opacity: 1;
     transition: 0.2s opacity ease;
     position: fixed;
     top: 81px;
