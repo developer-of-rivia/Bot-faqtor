@@ -415,9 +415,9 @@ $(document).ready(function() {
               complete: function(){
                 This.text(this.Count).css({color:"red"});
                 document.querySelector('.numbers__item-count--a').innerHTML = divideNumberByPieces(299938560);
-                document.querySelector('.numbers__item-count--b').innerHTML = divideNumberByPieces(17956000);
-                document.querySelector('.numbers__item-count--c').innerHTML = divideNumberByPieces(5326);
-                document.querySelector('.numbers__item-count--d').innerHTML = divideNumberByPieces(23326);
+                document.querySelector('.numbers__item-count--b').innerHTML = divideNumberByPieces(31245000);
+                document.querySelector('.numbers__item-count--c').innerHTML = divideNumberByPieces(7062);
+                document.querySelector('.numbers__item-count--d').innerHTML = divideNumberByPieces(50312);
               }
             }
           )
