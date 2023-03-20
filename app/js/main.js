@@ -386,34 +386,41 @@ $(document).ready(function() {
 
 
 
-    // $(window).on("scroll", function() {
-    //     let scroll = window.scrollY;
-    //     let element_position_by_number = 100;
-    //     // also you can get element position by offset method like this => $("element").offset().top
-    //     if (scroll >= element_position_by_number) {
-    //       runCounter();
-    //     }
-    // })
 
 
+    let alreadyDone = false;
+    $(window).on("scroll", function() {
+        if($('.numbers__box').hasClass('animated') && alreadyDone == false){
+            alreadyDone = true;
+            runCounter();
+        }
+    })
 
-    // function runCounter () {
-    //     $('.numbers__item-count').each(function(){
-    //       const This = $(this);
-    //       $({Count: This.text()}).animate(
-    //         {Count: This.parent().attr("data-count")},
-    //         {
-    //           duration: 2000,
-    //           easing: "linear",
-    //           step: function(){
-    //             This.text(Math.floor(this.Count))
-    //           },
-    //           complete: function(){
-    //             This.text(this.Count).css({color:"red"})
-    //           }
-    //         }
-    //       )
-    //     })
-    // }
+    function runCounter () {
+        $('.numbers__item-count').each(function(){
 
+            function divideNumberByPieces(x, delimiter) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || " ");
+            }
+
+          const This = $(this);
+          $({Count: This.text()}).animate(
+            {Count: This.parent().attr("data-count")},
+            {
+              duration: 1500,
+              easing: "linear",
+              step: function(){
+                This.text(Math.floor(this.Count))
+              },
+              complete: function(){
+                This.text(this.Count).css({color:"red"});
+                document.querySelector('.numbers__item-count--a').innerHTML = divideNumberByPieces(299938560);
+                document.querySelector('.numbers__item-count--b').innerHTML = divideNumberByPieces(17956000);
+                document.querySelector('.numbers__item-count--c').innerHTML = divideNumberByPieces(5326);
+                document.querySelector('.numbers__item-count--d').innerHTML = divideNumberByPieces(23326);
+              }
+            }
+          )
+        })
+    }
 });
