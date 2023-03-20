@@ -228,6 +228,7 @@ gulp.task('bc-buildcopy', function (done) {
   return gulp.src([
 		'app/fonts/**/*',
     'app/**/*.html',
+    'app/libs_foreign/**/*',
   ], {base: 'app/'})
   .pipe(gulp.dest('dist'));
 });
