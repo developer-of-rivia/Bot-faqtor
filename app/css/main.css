@@ -1205,8 +1205,8 @@ a[data-button~="colors2"]:hover:before {
 
 .main__right {
   position: absolute;
-  right: -130px;
-  padding-right: 130px;
+  right: -430px;
+  padding-right: 430px;
   width: 100%;
   height: 100%;
 }
@@ -1234,7 +1234,7 @@ a[data-button~="colors2"]:hover:before {
 
 .main__shadow {
   position: absolute;
-  right: 100px;
+  right: 300px;
   top: 0;
   z-index: 1;
 }
