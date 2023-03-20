@@ -407,6 +407,8 @@ a[data-button~="colors2"]:hover:before {
 
 .accordion__content span {
   font-weight: 700;
+  display: inline-block;
+  margin: 15px 0 5px;
 }
 
 .accordion__control {
