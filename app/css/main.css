@@ -2221,8 +2221,20 @@ a[data-button~="colors2"]:hover:before {
   box-shadow: -12px 20px 50px 5px rgba(235, 149, 87, 0.2);
 }
 
-.prot__item--4 .prot__right img {
-  box-shadow: -12px 20px 50px 5px rgba(158, 129, 239, 0.3);
+@media (max-width: 1370px) {
+  .prot__item--4 .prot__right {
+    margin-left: -90px;
+    right: -190px;
+  }
+}
+
+@media (max-width: 991px) {
+  .prot__item--4 .prot__right {
+    right: 0;
+    margin-left: 0;
+    margin-top: -70px;
+    margin-bottom: -90px;
+  }
 }
 
 .prot__item--5 .prot__right img {
